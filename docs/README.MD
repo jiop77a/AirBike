@@ -20,7 +20,7 @@ Alex BnB (name TBD) is a web application inspired by AirBnB built using Ruby on 
 
 [View Wireframes](wireframes)
 
-[React Components](/component-hierarchy.md)
+[React Components](component-hierarchy.md)
 
 [API endpoints](api-endpoints.md)
 
