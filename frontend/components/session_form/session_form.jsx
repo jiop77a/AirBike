@@ -62,7 +62,7 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form className="login-form-box">
-          Welcome to AirBike!
+          <h1>Welcome to AirBike!</h1>
           <br/>
           Please {semanticForm.toLowerCase()}
           {this.renderErrors()}
