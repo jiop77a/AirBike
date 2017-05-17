@@ -1,6 +1,6 @@
 # Alex BnB
 
-[Heroku](http://heroku.com)
+[Heroku](https://airbikeapp.herokuapp.com/#/)
 
 [Trello](https://trello.com/b/OubwossE/full-stack)
 
