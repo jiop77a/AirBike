@@ -14,10 +14,13 @@
  *= require_self
  */
 
- html, body, header, h1, h2, p, ul, li {
+ html, body, header, h1, h2, p, ul, li, button {
    margin: 0;
    border: 0;
    padding: 0;
+   outline: 0;
+   border: 0;
+   box-sizing: inherit;
 
    font: inherit;
    text-align: inherit;
@@ -39,10 +42,21 @@ h1 {
 
 header {
   border: 2px solid gray;
+  padding: 10px
 }
 
 header, header hgroup {
-  padding: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+h2.header-name {
+  margin-right: 10px;
+}
+
+button {
+  border: 1px solid grey;
+  padding: 3px;
+  cursor: pointer;
 }
