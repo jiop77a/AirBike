@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -34,13 +35,13 @@ class SessionForm extends React.Component {
       return (
         <nav className="redirect-bar">
           <p>Don't have an account?</p>
-          <Link to="/signup">sign up</Link>
+          <Link to="/signup">Sign Up</Link>
         </nav>);
     } else {
       return (
         <nav className="redirect-bar">
           <p>Already have an account?</p>
-          <Link to="/login">log in</Link>
+          <Link to="/login">Log In</Link>
         </nav>);
     }
   }
@@ -56,14 +57,16 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    const semanticForm = (this.props.formType === 'login' ? 'Log In' : 'Sign Up');
+
     return (
       <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+        <form className="login-form-box">
           Welcome to AirBike!
           <br/>
-          Please {this.props.formType}
+          Please {semanticForm.toLowerCase()}
           {this.renderErrors()}
-          <div className="login-form">
+          <section className="login-form">
             <br/>
             <label>Username:
               <input type="text"
@@ -81,8 +84,8 @@ class SessionForm extends React.Component {
                 />
             </label>
             <br/>
-            <input type="submit" value="Submit" />
-          </div>
+            <button className="header-button" onClick={this.handleSubmit}>{semanticForm}</button>
+          </section>
         </form>
         {this.navLink()}
       </div>
