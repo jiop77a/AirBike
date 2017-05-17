@@ -31,9 +31,17 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">sign up</Link>;
+      return (
+        <nav className="redirect-bar">
+          <p>Don't have an account?</p>
+          <Link to="/signup">sign up</Link>
+        </nav>);
     } else {
-      return <Link to="/login">log in</Link>;
+      return (
+        <nav className="redirect-bar">
+          <p>Already have an account?</p>
+          <Link to="/login">log in</Link>
+        </nav>);
     }
   }
 
@@ -53,7 +61,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           Welcome to AirBike!
           <br/>
-          Please {this.props.formType} or {this.navLink()}
+          Please {this.props.formType}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
@@ -76,6 +84,7 @@ class SessionForm extends React.Component {
             <input type="submit" value="Submit" />
           </div>
         </form>
+        {this.navLink()}
       </div>
     );
   }
