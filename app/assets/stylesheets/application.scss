@@ -50,6 +50,7 @@ header {
   border: 2px solid gray;
   padding: 10px;
   margin: 40px;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 header, header hgroup {
@@ -79,6 +80,7 @@ button {
     display: flex;
     flex-direction: column;
     align-content: space-between;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 form.login-form-box {
