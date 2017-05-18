@@ -32,9 +32,14 @@
    list-style: none;
  }
 
-body {
+html {
+  background-image: url("https://gzmyu4ma9b-flywheel.netdna-ssl.com/wp-content/uploads/2016/05/Heritage-Division_classic-Italian-city-bikes_1.jpg");
+}
+
+html, body {
   font-family: sans-serif;
-  margin: 10px;
+  height: 100%;
+  width: 100%;
 }
 
 h1 {
@@ -43,13 +48,15 @@ h1 {
 
 header {
   border: 2px solid gray;
-  padding: 10px
+  padding: 10px;
+  margin: 40px;
 }
 
 header, header hgroup {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 80%
 }
 
 h2.header-name {
