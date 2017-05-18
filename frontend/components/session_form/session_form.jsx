@@ -84,7 +84,10 @@ class SessionForm extends React.Component {
                 />
             </label>
             <br/>
-            <button className="header-button" onClick={this.handleSubmit}>{semanticForm}</button>
+            <nav className="button-nav">
+              <button onClick={this.handleSubmit}>{semanticForm}</button>
+              <button className="demo-button" onClick={this.handleSubmit}>Demo Login</button>
+            </nav>
           </section>
         </form>
         {this.navLink()}

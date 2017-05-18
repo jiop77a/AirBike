@@ -51,13 +51,14 @@ header {
   padding: 10px;
   margin: 40px;
   background-color: rgba(255, 255, 255, 0.4);
+  width: 80%;
+  min-width: 400px
 }
 
 header, header hgroup {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 80%
 }
 
 h2.header-name {
@@ -108,5 +109,8 @@ a {
 
 input.login-input {
     border-bottom: 1px solid grey;
+    margin-left: 10px;
+}
+button.demo-button {
     margin-left: 10px;
 }
