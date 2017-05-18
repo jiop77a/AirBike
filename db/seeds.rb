@@ -88,7 +88,7 @@ Bike.create!(
   lat: 37.767490,
   lng: -122.402774,
   variety: "Road",
-  featured: true
+  featured: false
 )
 
 Bike.create!(

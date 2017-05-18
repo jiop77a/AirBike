@@ -5,9 +5,8 @@ class Bike < ActiveRecord::Base
             :city,
             :lat,
             :lng,
-            :variety,
-            :featured, presence: true
+            :variety, presence: true
   validates :variety, inclusion: { in: %w(Mountain Road Cruiser Eccentric)}
-
+  validates :featured, inclusion: { in: [true, false]}
 
 end
