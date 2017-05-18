@@ -17,7 +17,7 @@
 * POST /api/session - login
 * DELETE /api/session - logout
 
-## Spots
+## Bikes
 
 * GET /api/spots
   * search
