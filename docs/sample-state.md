@@ -10,15 +10,17 @@
    reviewForm: {errors: ["body can't be blank"], ...}
    bookingform: {errors: ["house is already booked for those dates"], ...}
  },
-  spots: {
+  bikes: {
     1: {
       id: 1,
-      description: "a lovely house"
+      description: "a lovely bike"
       city: "San Francisco",
-      cost: 185
-      location_lat: 37.786875
-      location_long: -122.418318
+      cost: 35
+      lat: 37.786875
+      lng: -122.418318
       featured: true
+      picture_url:
+      variety: "Mountain"
     },
     2: {
       id: 2
