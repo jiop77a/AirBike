@@ -7,7 +7,7 @@ class CreateBikes < ActiveRecord::Migration
       t.string :city
       t.decimal :lat
       t.decimal :lng
-      t.string :type, null: false
+      t.string :variety, null: false
       t.boolean :featured, null: false
 
       t.timestamps null: false

@@ -18,7 +18,7 @@ class Api::BikesController < ApplicationController
       :city,
       :lat,
       :lng,
-      :type,
+      :variety,
       :featured
     )
   end
