@@ -21,8 +21,8 @@ Has Many: Bookings
 column name | data type | details
 ------------ | ------------- | -------------
 Id | integer | Not null, primary key
-Description | text |
-Picture_url | string | 
+Description | string |
+Picture_url | string |
 City | string | not null
 Cost | integer | not null
 Location_Lat | decimal |
