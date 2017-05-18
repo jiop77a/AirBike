@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuest = this.handleGuest.bind(this);
 
   }
 
@@ -27,6 +28,12 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
+    this.props.processForm({user});
+  }
+
+  handleGuest(e) {
+    e.preventDefault();
+    const user = {username: "guest", password: "password"};
     this.props.processForm({user});
   }
 
@@ -86,7 +93,7 @@ class SessionForm extends React.Component {
             <br/>
             <nav className="button-nav">
               <button onClick={this.handleSubmit}>{semanticForm}</button>
-              <button className="demo-button" onClick={this.handleSubmit}>Demo Login</button>
+              <button className="demo-button" onClick={this.handleGuest}>Demo Login</button>
             </nav>
           </section>
         </form>
