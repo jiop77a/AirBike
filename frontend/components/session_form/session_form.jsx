@@ -67,37 +67,39 @@ class SessionForm extends React.Component {
     const semanticForm = (this.props.formType === 'login' ? 'Log In' : 'Sign Up');
 
     return (
-      <div className="login-form-container">
-        <form className="login-form-box">
-          <h1>Welcome to AirBike!</h1>
-          <br/>
-          Please {semanticForm.toLowerCase()}
-          {this.renderErrors()}
-          <section className="login-form">
+      <div className="login-form-window">
+        <div className="login-form-container">
+          <form className="login-form-box">
+            <h1>Welcome to AirBike!</h1>
             <br/>
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-                />
-            </label>
-            <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-                />
-            </label>
-            <br/>
-            <nav className="button-nav">
-              <button onClick={this.handleSubmit}>{semanticForm}</button>
-              <button className="demo-button" onClick={this.handleGuest}>Demo Login</button>
-            </nav>
-          </section>
-        </form>
-        {this.navLink()}
+            Please {semanticForm.toLowerCase()}
+            {this.renderErrors()}
+            <section className="login-form">
+              <br/>
+              <label>Username:
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                  />
+              </label>
+              <br/>
+              <label>Password:
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                  />
+              </label>
+              <br/>
+              <nav className="button-nav">
+                <button onClick={this.handleSubmit}>{semanticForm}</button>
+                <button className="demo-button" onClick={this.handleGuest}>Demo Login</button>
+              </nav>
+            </section>
+          </form>
+          {this.navLink()}
+        </div>
       </div>
     );
   }

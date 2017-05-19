@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Link, Redirect, Route } from 'react-router-dom';
-import FeaturedBikeContainer from './featured_bike_container';
 import BikeDetailContainer from '../bike_detail/bike_detail_container';
 
 const personalGreeting = (currentUser, logout) => (
@@ -13,16 +12,25 @@ const personalGreeting = (currentUser, logout) => (
         <button className="header-button" onClick={logout}>Log Out</button>
       </hgroup>
     </header>
-
-    <Route exact path="/" component={FeaturedBikeContainer} />
-    <Route exact path="/bikes/:bikeId" component={BikeDetailContainer} />
-
-</div>
+  </div>
 );
+
+const impersonalGreeting = () => (
+  <div>
+    <header>
+      <h1>Air Bike</h1>
+      <hgroup className="header-group">
+        <Link to="/signup" className="header-button">Sign Up</Link>
+        <Link to="/login" className="header-button">Log In</Link>
+      </hgroup>
+    </header>
+  </div>
+);
+
 
 const Greeting = ({ currentUser, logout }) => (
   currentUser ? personalGreeting(currentUser, logout) :
-  <Redirect to="/login" />
+  impersonalGreeting()
 );
 
 export default Greeting;

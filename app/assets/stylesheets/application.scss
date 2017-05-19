@@ -32,9 +32,8 @@
    list-style: none;
  }
 
-html {
-  background-image: url("https://gzmyu4ma9b-flywheel.netdna-ssl.com/wp-content/uploads/2016/05/Heritage-Division_classic-Italian-city-bikes_1.jpg");
-}
+
+// https://gzmyu4ma9b-flywheel.netdna-ssl.com/wp-content/uploads/2016/05/Heritage-Division_classic-Italian-city-bikes_1.jpg
 
 html, body {
   font-family: sans-serif;
@@ -65,24 +64,23 @@ h2.header-name {
   margin-right: 20px;
 }
 
-button {
+button, .header-button {
   border: 1px solid grey;
   padding: 4px;
   cursor: pointer;
   border-radius: 9px;
 }
 
-.login-form-container {
-    width: 350px;
-    margin: auto;
-    margin-top: 150px;
-    border: 2px solid black;
-    padding: 20px 10px 20px 10px;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    background-color: rgba(255, 255, 255, 0.4);
+button:hover, .header-button:hover {
+  background-color: aliceblue;
 }
+
+.header-button:last-of-type {
+  margin-left: 10px;
+}
+
+
+
 
 form.login-form-box {
     display: flex;
@@ -156,4 +154,25 @@ button.demo-button {
 .featured-bikes-list {
   display: flex;
   flex-wrap: wrap;
+}
+
+.login-form-container {
+    width: 350px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.login-form-window {
+  padding-top: 200px;
+  width: 100vw;
+  height: calc(100vh - 200px);
+  background-image: url("../assets/591f7ccf8b364369462139.gif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
