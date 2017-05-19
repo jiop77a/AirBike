@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link, Redirect, Route } from 'react-router-dom';
 import FeaturedBikeContainer from './featured_bike_container';
+import BikeDetailContainer from '../bike_detail/bike_detail_container';
 
 const personalGreeting = (currentUser, logout) => (
   <div>
@@ -14,6 +15,7 @@ const personalGreeting = (currentUser, logout) => (
     </header>
 
     <Route exact path="/" component={FeaturedBikeContainer} />
+    <Route exact path="/bikes/:bikeId" component={BikeDetailContainer} />
 
 </div>
 );

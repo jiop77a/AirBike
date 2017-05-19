@@ -3,6 +3,7 @@
   currentUser: {
     id: 1,
     username: "guest"
+    
   },
   forms: {
    signUp: {errors: []},
@@ -27,7 +28,7 @@
       ...,
     }
   },
-  spotDetail: {
+  bikeDetail: {
     id: 5,
     description: "a truly spectacular abode",
     city: "Berkeley",
