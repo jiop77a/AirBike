@@ -10,8 +10,9 @@ class FeaturedBikes extends Component {
     const { bikes } = this.props;
 
     return(
-      <section className="featured-bikes">
-        <ul>
+      <section className="featured-bikes-container">
+        <h2>Featured</h2>
+        <ul className="featured-bikes-list">
           {bikes.map(bike => <FeaturedBikeItem key = {bike.id} bike = {bike} />)}
         </ul>
       </section>

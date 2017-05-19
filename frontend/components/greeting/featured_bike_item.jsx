@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 const FeaturedBikeItem = ({ bike }) => (
   <li className="featured-bike-item">
     <Link to={`/bikes/${bike.id}`}>
-      <span>${bike.cost}</span>
-      <span>{bike.city}</span>
-      <img src={bike.image_url} alt={bike.description} />
+      <label className="featured-bike-label">
+        <span>${bike.cost}</span>
+        <span>{bike.city}</span>
+      </label>
+      <img src={bike.picture_url} alt={bike.description} />
     </Link>
   </li>
 );
