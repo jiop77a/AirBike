@@ -11,7 +11,7 @@ class FeaturedBikes extends Component {
 
     return(
       <section className="featured-bikes-container">
-        <h2>Featured</h2>
+        <h2>Featured Bikes</h2>
         <ul className="featured-bikes-list">
           {bikes.map(bike => <FeaturedBikeItem key = {bike.id} bike = {bike} />)}
         </ul>

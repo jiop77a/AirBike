@@ -55,7 +55,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
+      <ul className="session-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -71,8 +71,10 @@ class SessionForm extends React.Component {
         <div className="login-form-container">
           <form className="login-form-box">
             <h1>Welcome to AirBike!</h1>
-            <br/>
+            <br />
             Please {semanticForm.toLowerCase()}
+            <br />
+            <br />
             {this.renderErrors()}
             <section className="login-form">
               <br/>

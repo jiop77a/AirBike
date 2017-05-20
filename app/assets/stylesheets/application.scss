@@ -44,6 +44,7 @@ html, body {
 h1 {
   font-size: 30px;
 }
+// header and buttons
 
 header {
   border: 2px solid gray;
@@ -80,7 +81,28 @@ button:hover, .header-button:hover {
 }
 
 
+// login form
 
+.login-form-container {
+    width: 350px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.login-form-window {
+  padding-top: 150px;
+  width: 100vw;
+  height: calc(100vh - 150px);
+  background-image: asset-url("591f7ccf8b364369462139.gif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
 form.login-form-box {
     display: flex;
@@ -114,6 +136,18 @@ button.demo-button {
     margin-left: 10px;
 }
 
+ul.session-errors {
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+
+  > li {
+    color: darkred;
+  }
+}
+
+// featured bikes
+
 .featured-bikes-container {
   display: flex;
   flex-direction: column;
@@ -125,6 +159,7 @@ button.demo-button {
 
   > h2 {
     margin-left: 10px;
+    font-size: 20px;
   }
 }
 
@@ -139,10 +174,21 @@ button.demo-button {
     cursor: pointer;
   }
 
+  > a:hover {
+  }
+
   > a > img {
       width: 300px;
       height: 200px;
       vertical-align: middle;
+      transition: all 0.5s ease;
+  }
+
+// rotate(-10deg)
+
+  > a > img:hover {
+    position: relative;
+    transform: scale(1.1);
   }
 }
 
@@ -151,28 +197,8 @@ button.demo-button {
   justify-content: space-around;
   margin-bottom: 10px;
 }
+
 .featured-bikes-list {
   display: flex;
   flex-wrap: wrap;
-}
-
-.login-form-container {
-    width: 350px;
-    margin: auto;
-    border: 2px solid black;
-    padding: 20px 10px 20px 10px;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-.login-form-window {
-  padding-top: 200px;
-  width: 100vw;
-  height: calc(100vh - 200px);
-  background-image: asset-url("591f7ccf8b364369462139.gif");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
