@@ -32,10 +32,10 @@ class BikeDetail extends Component {
             </div>
           </div>
           <div className="booking-form">
-
+            Booking-form
           </div>
         </section>
-        <section className="reviews-and form">
+        <section className="reviews-and-form">
           <div className="review-list">
             <h2>Reviews</h2>
             <ul className="review-items">

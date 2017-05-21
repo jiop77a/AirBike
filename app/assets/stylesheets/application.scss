@@ -214,6 +214,71 @@ section.bike-detail {
 section.details-and-form {
   margin-top: 20px;
   display: flex;
+  max-width: 1000px;
+  margin-left: 10%;
+  margin-right: 10%;
+  min-width: 600px;
+}
+
+.detail-content {
+  min-width: 420px;
+
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 400px;
+  min-width: 360px;
+  align-items: center;
+  border: 2px solid grey;
+  width: 50%;
+}
+
+
+.bike-detail-label {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  > span {
+    font-size: 20px;
+      font-weight: bold;
+  }
+}
+
+
+article.bike-detail-description {
+  border: 2px solid grey;
+  width: 200px;
+  padding: 10px;
+  margin-top: 40px;
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 200px;
+  margin-top: 70px;
+
+  > h2 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+}
+
+section.reviews-and-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin-left: 10%;
+  margin-right: 10%;
+  min-width: 600px;
 }
 
 figure.bike-detail-figure {
@@ -231,23 +296,4 @@ figure.bike-detail-figure {
       height: auto;
     }
 
-}
-
-.booking-form {
-    border: 2px solid grey;
-    width: 50%;
-}
-
-.bike-detail-label {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.bike-detail-label {}
-
-article.bike-detail-description {
-    border: 2px solid grey;
-    width: 200px;
-    margin-top: 40px;
 }
