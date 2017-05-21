@@ -9,4 +9,6 @@ class Bike < ActiveRecord::Base
   validates :variety, inclusion: { in: %w(Mountain Road Cruiser Eccentric)}
   validates :featured, inclusion: { in: [true, false]}
 
+  has_many :reviews
+
 end

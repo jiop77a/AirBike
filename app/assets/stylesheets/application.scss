@@ -206,6 +206,22 @@ ul.session-errors {
 
 //bike showpage
 
+figure.bike-detail-figure {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin-left: 10%;
+  margin-right: 10%;
+  min-width: 600px;
+
+  > img {
+    max-height: 500px;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
 section.bike-detail {
     margin-left: 40px;
     max-width: 80%;
@@ -279,21 +295,4 @@ section.reviews-and-form {
   margin-left: 10%;
   margin-right: 10%;
   min-width: 600px;
-}
-
-figure.bike-detail-figure {
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    margin-left: 10%;
-    margin-right: 10%;
-    min-width: 600px;
-
-    > img {
-      max-height: 500px;
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
 }
