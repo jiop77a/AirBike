@@ -15,7 +15,8 @@
  */
 
  html, body, header, h1, h2, p, ul, li,
- button, div, nav, section, form, input, a, label {
+ button, div, nav, section, form, input, a, label,
+ img, figure, span, aside, article {
    margin: 0;
    border: 0;
    padding: 0;
@@ -201,4 +202,52 @@ ul.session-errors {
 .featured-bikes-list {
   display: flex;
   flex-wrap: wrap;
+}
+
+//bike showpage
+
+section.bike-detail {
+    margin-left: 40px;
+    max-width: 80%;
+}
+
+section.details-and-form {
+  margin-top: 20px;
+  display: flex;
+}
+
+figure.bike-detail-figure {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin-left: 10%;
+    margin-right: 10%;
+    min-width: 600px;
+
+    > img {
+      max-height: 500px;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+}
+
+.booking-form {
+    border: 2px solid grey;
+    width: 50%;
+}
+
+.bike-detail-label {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.bike-detail-label {}
+
+article.bike-detail-description {
+    border: 2px solid grey;
+    width: 200px;
+    margin-top: 40px;
 }
