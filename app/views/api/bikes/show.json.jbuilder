@@ -1,5 +1,9 @@
 json.partial! '/api/bikes/bike', bike: @bike
 
 json.reviews do
-  json.partial! 'api/reviews/review', collection: bench.reviews, as: :review
+  @bike.reviews.each do |review|
+    json.set! review.id do
+      json.partial! 'api/reviews/review', review: review
+    end
+  end
 end
