@@ -2,6 +2,9 @@ import * as APIUtil from '../util/bike_api_util';
 
 export const RECEIVE_BIKES = 'RECEIVE_BIKES';
 export const RECEIVE_BIKE = 'RECEIVE_BIKE';
+export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+export const REMOVE_REVIEW = 'REMOVE_REVIEW';
+export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 export const receiveBikes = bikes => ({
   type: RECEIVE_BIKES,
@@ -13,6 +16,21 @@ export const receiveBike = bike => ({
   bike
 });
 
+export const receiveReview = review => ({
+  type: RECEIVE_REVIEW,
+  review
+});
+
+export const removeReview = review => ({
+  type: REMOVE_REVIEW,
+  review
+});
+
+export const receiveErrors = errors => ({
+  type: RECEIVE_ERRORS,
+  errors
+});
+
 export const fetchBikes = () => dispatch => (
   APIUtil.fetchBikes().then(bikes => (
     dispatch(receiveBikes(bikes))
@@ -22,5 +40,21 @@ export const fetchBikes = () => dispatch => (
 export const fetchBike = id => dispatch => (
   APIUtil.fetchBike(id).then(bike => (
     dispatch(receiveBike(bike))
+  ))
+);
+
+export const createReview = newReview => dispatch => (
+  APIUtil.createReview(newReview).then(review => (
+    dispatch(receiveReview(review))
+      ), err => (
+        dispatch(receiveErrors(err.responseJSON))
+  ))
+);
+
+export const deleteReview = id => dispatch => (
+  APIUtil.destroyReview(id).then(review => (
+    dispatch(removeReview(review))
+      ), err => (
+        dispatch(receiveErrors(err.responseJSON))
   ))
 );
