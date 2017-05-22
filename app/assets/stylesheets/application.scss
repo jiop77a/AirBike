@@ -224,6 +224,7 @@ figure.bike-detail-figure {
 
 section.bike-detail {
     margin-left: 40px;
+    margin-bottom: 40px;
     max-width: 80%;
 }
 
@@ -295,4 +296,12 @@ section.reviews-and-form {
   margin-left: 10%;
   margin-right: 10%;
   min-width: 600px;
+}
+
+.review-list {
+  > h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 }

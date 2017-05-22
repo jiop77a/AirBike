@@ -18,7 +18,7 @@ export default (state = defaultBike, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_BIKE:
-      return merge({}, action.bike);
+      return merge({}, defaultBike, action.bike);
     case RECEIVE_REVIEW:
       newBike.reviews[action.review.id] = action.review;
       return newBike;

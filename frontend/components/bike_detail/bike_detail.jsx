@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { values } from 'lodash';
+import ReviewItem from './review_item';
+import ReviewForm from './review_form';
 
 class BikeDetail extends Component {
   componentDidMount() {
@@ -8,13 +11,27 @@ class BikeDetail extends Component {
   componentWillReceiveProps(nextProps) {
     if (parseInt(this.props.match.params.bikeId) !==  parseInt(nextProps.match.params.bikeId)) {
       this.props.fetchBike(parseInt(nextProps.match.params.bikeId));
+
     }
   }
 
+  renderErrors() {
+    return(
+      <ul className="bike-detail-errors">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>{error}</li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
-    const { bikeDetail } = this.props;
+    const { bikeDetail, currentUser } = this.props;
+    const { reviews } = bikeDetail;
+
     return (
       <section className="bike-detail">
+        {this.renderErrors()}
         <figure className="bike-detail-figure">
           <img src ={bikeDetail.picture_url} alt={bikeDetail.description} />
         </figure>
@@ -39,14 +56,12 @@ class BikeDetail extends Component {
           <div className="review-list">
             <h2>Reviews</h2>
             <ul className="review-items">
-              <li>Lorem ipsum dolor sit amet, </li>
-              <li>consectetur adipisicing elit, </li>
-              <li>sed do eiusmod tempor incididunt ut </li>
-              <li>labore et dolore magna aliqua. Ut </li>
+              {values(reviews).map(review => <ReviewItem key = {review.id} review = {review} user = {this.props.currentUser} deleteReview = {this.props.deleteReview}/>)}
             </ul>
           </div>
-          <div className="review-form">
-
+          <div className="review-form-container">
+            <h2>Create Review</h2>
+            <ReviewForm createReview = {this.props.createReview} user = {this.props.currentUser} bikeId = {this.props.bikeDetail.id}/>
           </div>
         </section>
       </section>
