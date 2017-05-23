@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import {fetchBikes, fetchBike, createReview, deleteReview} from './actions/bike_actions';
+import {clearErrors} from './actions/session_actions';
 
 
 
@@ -25,3 +26,4 @@ window.fetchBikes = fetchBikes;
 window.fetchBike = fetchBike;
 window.createReview = createReview;
 window.deleteReview = deleteReview;
+window.clearErrors = clearErrors;

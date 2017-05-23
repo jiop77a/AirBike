@@ -10,7 +10,12 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGuest = this.handleGuest.bind(this);
+    this.clear = this.clear.bind(this);
 
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -37,18 +42,27 @@ class SessionForm extends React.Component {
     this.props.login({user});
   }
 
+  clear() {
+    this.props.clearErrors();
+  }
+
+  // clear2() {
+  //   this.props.clearErrors();
+  // }
+
+
   navLink() {
     if (this.props.formType === 'login') {
       return (
         <nav className="redirect-bar">
           <p>Don't have an account?</p>
-          <Link to="/signup">Sign Up</Link>
+          <div onClick={this.clear}><Link to="/signup">Sign Up</Link></div>
         </nav>);
     } else {
       return (
         <nav className="redirect-bar">
           <p>Already have an account?</p>
-          <Link to="/login">Log In</Link>
+          <div onClick={this.clear}><Link to="/login">Log In</Link></div>
         </nav>);
     }
   }
