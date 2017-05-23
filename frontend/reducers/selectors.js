@@ -9,3 +9,5 @@ export const selectFeaturedBikes = ({ bikes }) => {
   });
   return featuredArr;
 };
+
+export const selectAllBikes = ({ bikes }) => values(bikes);
