@@ -25,7 +25,7 @@ const SessionReducer = (state = nullUser, action) => {
         errors
       });
     case CLEAR_ERRORS:
-      return merge({}, {errors: []});
+      return merge({}, nullUser);
     default:
       return state;
   }

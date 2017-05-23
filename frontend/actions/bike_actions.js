@@ -5,6 +5,7 @@ export const RECEIVE_BIKE = 'RECEIVE_BIKE';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
+export const CLEAR_REVIEW_ERRORS = 'CLEAR_REVIEW_ERRORS';
 
 export const receiveBikes = bikes => ({
   type: RECEIVE_BIKES,
@@ -29,6 +30,10 @@ export const removeReview = review => ({
 export const receiveReviewErrors = errors => ({
   type: RECEIVE_REVIEW_ERRORS,
   errors
+});
+
+export const clearReviewErrors = () => ({
+  type: CLEAR_REVIEW_ERRORS
 });
 
 export const fetchBikes = () => dispatch => (

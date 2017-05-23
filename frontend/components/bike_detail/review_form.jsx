@@ -10,6 +10,7 @@ class ReviewForm extends React.Component {
       body: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clear = this.clear.bind(this);
   }
 
   update(property) {
@@ -26,7 +27,11 @@ class ReviewForm extends React.Component {
         rating: 10,
         body: "",
       })
-    );
+    ).then(() => this.props.clearErrors());
+  }
+
+  clear() {
+    this.props.clearErrors();
   }
 
   render() {

@@ -4,7 +4,8 @@ import {
   RECEIVE_BIKE,
   RECEIVE_REVIEW,
   REMOVE_REVIEW,
-  RECEIVE_REVIEW_ERRORS
+  RECEIVE_REVIEW_ERRORS,
+  CLEAR_REVIEW_ERRORS
 } from '../actions/bike_actions';
 
 const defaultBike = {
@@ -22,11 +23,14 @@ export default (state = defaultBike, action) => {
     case RECEIVE_REVIEW:
       newBike.reviews[action.review.id] = action.review;
       return newBike;
-    case REMOVE_REVIEW:
-      delete newBike.reviews[action.review.id];
-      return newBike;
     case RECEIVE_REVIEW_ERRORS:
       newBike.errors = action.errors;
+      return newBike;
+    case REMOVE_REVIEW:
+      delete newBike.reviews[action.review.id];
+      // return newBike;
+    case CLEAR_REVIEW_ERRORS:
+      newBike.errors = [];
       return newBike;
     default:
       return state;
