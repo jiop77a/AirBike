@@ -53,7 +53,11 @@ header {
   margin: 40px;
   background-color: rgba(255, 255, 255, 0.4);
   width: 80%;
-  min-width: 400px
+  min-width: 400px;
+
+  > a {
+    font-size: 30px;
+  }
 }
 
 header, header hgroup {
@@ -298,10 +302,59 @@ section.reviews-and-form {
   min-width: 600px;
 }
 
-.review-list {
+.review-form-container {
+  width: 40%;
+
+  > p {
+    color: darkred;
+  }
+
   > h2 {
     font-weight: bold;
     font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.review-list {
+  width: 40%;
+  > h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.review-label {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 10px;
+}
+
+li.review-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+
+.delete-button {
+  display: flex;
+  margin-top: 10px;
+}
+
+.review-form {
+  > label {
+    padding-top: 10px;
+  }
+  > div {
+    font-size: 17px;
+  }
+}
+
+.bike-detail-errors {
+  margin-top: 10px;
+
+  > li {
+    color: darkred;
   }
 }
