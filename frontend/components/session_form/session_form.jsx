@@ -14,10 +14,6 @@ class SessionForm extends React.Component {
 
   }
 
-  componentWillUnmount() {
-    this.props.clearErrors();
-  }
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
@@ -45,10 +41,6 @@ class SessionForm extends React.Component {
   clear() {
     this.props.clearErrors();
   }
-
-  // clear2() {
-  //   this.props.clearErrors();
-  // }
 
 
   navLink() {
