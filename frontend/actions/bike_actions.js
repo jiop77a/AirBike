@@ -4,7 +4,7 @@ export const RECEIVE_BIKES = 'RECEIVE_BIKES';
 export const RECEIVE_BIKE = 'RECEIVE_BIKE';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
 
 export const receiveBikes = bikes => ({
   type: RECEIVE_BIKES,
@@ -26,8 +26,8 @@ export const removeReview = review => ({
   review
 });
 
-export const receiveErrors = errors => ({
-  type: RECEIVE_ERRORS,
+export const receiveReviewErrors = errors => ({
+  type: RECEIVE_REVIEW_ERRORS,
   errors
 });
 
@@ -47,14 +47,12 @@ export const createReview = newReview => dispatch => (
   APIUtil.createReview(newReview).then(review => (
     dispatch(receiveReview(review))
       ), err => (
-        dispatch(receiveErrors(err.responseJSON))
+        dispatch(receiveReviewErrors(err.responseJSON))
   ))
 );
 
 export const deleteReview = id => dispatch => (
   APIUtil.destroyReview(id).then(review => (
     dispatch(removeReview(review))
-      ), err => (
-        dispatch(receiveErrors(err.responseJSON))
-  ))
-);
+      )
+  ));

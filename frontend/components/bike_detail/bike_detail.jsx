@@ -19,7 +19,7 @@ class BikeDetail extends Component {
     return(
       <ul className="bike-detail-errors">
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>{error}</li>
+          <li key={`error-${i}`}>{error.slice(4)}</li>
         ))}
       </ul>
     );
@@ -29,9 +29,16 @@ class BikeDetail extends Component {
     const { bikeDetail, currentUser } = this.props;
     const { reviews } = bikeDetail;
 
+    const optionalForm = (user) => {
+      if (user) {
+        return <ReviewForm createReview = {this.props.createReview} user = {this.props.currentUser} bikeId = {this.props.bikeDetail.id}/>;
+      } else {
+        return <p>You must be logged in to leave a review</p>;
+      }
+    };
+
     return (
       <section className="bike-detail">
-        {this.renderErrors()}
         <figure className="bike-detail-figure">
           <img src ={bikeDetail.picture_url} alt={bikeDetail.description} />
         </figure>
@@ -61,7 +68,8 @@ class BikeDetail extends Component {
           </div>
           <div className="review-form-container">
             <h2>Create Review</h2>
-            <ReviewForm createReview = {this.props.createReview} user = {this.props.currentUser} bikeId = {this.props.bikeDetail.id}/>
+            {optionalForm(Boolean(this.props.currentUser))}
+            {this.renderErrors()}
           </div>
         </section>
       </section>
