@@ -42,6 +42,12 @@ export const fetchBikes = () => dispatch => (
   ))
 );
 
+export const searchBikes = data => dispatch => (
+  APIUtil.fetchBikes(data).then(bikes => (
+    dispatch(receiveBikes(bikes))
+  ))
+);
+
 export const fetchBike = id => dispatch => (
   APIUtil.fetchBike(id).then(bike => (
     dispatch(receiveBike(bike))
