@@ -21,10 +21,16 @@ class MarkerManager {
 
   createMarkerFromBike(bike) {
     const position = new google.maps.LatLng(bike.lat, bike.lng);
+    const image = {
+      url: 'http://image.flaticon.com/icons/png/512/8/8071.png',
+      scaledSize: new google.maps.Size(60,60),
+    };
     const marker = new google.maps.Marker({
       position,
+      animation: google.maps.Animation.DROP,
       map: this.map,
-      bikeId: bike.id
+      bikeId: bike.id,
+      icon: image
     });
 
     marker.addListener('click', () => this.handleClick(bike));
