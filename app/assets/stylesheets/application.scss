@@ -16,7 +16,7 @@
 
  html, body, header, h1, h2, p, ul, li,
  button, div, nav, section, form, input, a, label,
- img, figure, span, aside, article {
+ img, option, figure, span, aside, article {
    margin: 0;
    border: 0;
    padding: 0;
@@ -109,6 +109,25 @@ section.search-and-text {
 
 p.welcome-line-1 {
     font-size: 30px;
+}
+
+form.search-bar {
+    display: flex;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.search-bar-city {
+  > label {
+    font-size: 20px;
+  }
+}
+input.city-input {
+    margin-left: 10px;
+    border-bottom: 1px solid grey;
 }
 
 .search-bar {
@@ -391,6 +410,17 @@ li.review-item {
 
 //search
 
+.option {
+  font-size: 20px;
+}
+
+form.search-bar {
+    display: flex;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: space-around;
+}
 .map-and-results {
   display: flex;
   flex-direction: row;

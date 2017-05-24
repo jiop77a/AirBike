@@ -30,13 +30,13 @@ class SearchBar extends React.Component {
     return (
       <form className="search-bar" onSubmit={this.handleSubmit}>
         <div className="search-bar-city">
-          <label>City:
+          <label>City:</label>
             <input type="text"
               value={this.state.city}
               onChange={this.update('city')}
               className="city-input"
               />
-          </label>
+          
         </div>
         <div className="search-bar-variety">
           <select
