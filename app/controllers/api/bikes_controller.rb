@@ -3,7 +3,7 @@ class Api::BikesController < ApplicationController
   def index
       @bikes = Bike.all
       @bikes = @bikes.where("variety = ?", params[:variety]) if params[:variety]
-      @bikes = @bikes.where("city = ?", params[:city]) if params[:city]
+      @bikes = @bikes.where("city ~ ?", params[:city]) if params[:city]
   end
 
   def show

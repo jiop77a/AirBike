@@ -5,7 +5,7 @@ class SearchBar extends React.Component {
     super(props);
     this.state = {
       city: "",
-      variety: ""
+      variety: "Select Bike Type"
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -14,9 +14,9 @@ class SearchBar extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.searchBikes(this.state).then(() =>
-      this.setstate({
+      this.setState({
         city: "",
-        variety: "Cruiser"
+        variety: ""
       })
     );
   }
@@ -26,7 +26,7 @@ class SearchBar extends React.Component {
   }
 
   render() {
-    const bikeTypes = ["Cruiser", "Mountain", "Road", "Eccentric"];
+    const bikeTypes = ["Select Bike Type", "Cruiser", "Mountain", "Road", "Eccentric"];
     return (
       <form className="search-bar" onSubmit={this.handleSubmit}>
         <div className="search-bar-city">
@@ -41,10 +41,13 @@ class SearchBar extends React.Component {
         <div className="search-bar-variety">
           <select
              value={this.state.variety}
-             onChange={this.update('variety')}
-             defaultValue="Select Bike Type">
+             onChange={this.update('variety')}>
              {bikeTypes.map((type, i) => {
-               return <option value={type} key={i}>{type}</option>;
+               return <option value={type} key={i}
+                 disabled={type==="Select Bike Type" ? "disabled" : ""}>
+
+                 {type}
+               </option>;
              })}
            </select>
         </div>
