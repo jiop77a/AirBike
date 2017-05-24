@@ -16,17 +16,18 @@ class BikeMap extends React.Component {
     this.props.fetchAllBikes();
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions);
-    this.MarkerManager = new MarkerManager(this.map);
+    this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
     this.MarkerManager.updateMarkers(this.props.bikes);
-    console.log(this.MarkerManager.markers);
-    console.log(this.props.bikes);
 }
-// this.handleMarkerClick.bind(this));
 
   componentDidUpdate() {
     this.MarkerManager.updateMarkers(this.props.bikes);
-    console.log(this.props.bikes);
+
 }
+
+  handleMarkerClick(bike) {
+    this.props.history.push(`bikes/${bike.id}`);
+  }
 
   render() {
     return (
@@ -37,4 +38,4 @@ class BikeMap extends React.Component {
   }
 }
 
-export default BikeMap;
+export default withRouter(BikeMap);
