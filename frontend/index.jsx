@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import {fetchBikes, fetchBike, createReview, deleteReview} from './actions/bike_actions';
+// import {fetchBikes, fetchBike, createReview, deleteReview} from './actions/bike_actions';
+import {fetchBikes} from './util/bike_api_util'
 import {clearErrors} from './actions/session_actions';
 
 

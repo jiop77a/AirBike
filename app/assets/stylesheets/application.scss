@@ -399,7 +399,7 @@ li.review-item {
 .left-half {
   width: 50%;
   min-width: 500px;
-  height: auto;
+  height: 80vh;
   margin-right: 50px;
   margin-left: 50px;
 }
@@ -408,6 +408,7 @@ li.review-item {
   display: flex;
   flex-direction: column;
   width: 50%;
+  overflow: auto;
 
   > h2 {
     display: flex;

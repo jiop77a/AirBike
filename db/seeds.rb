@@ -62,9 +62,9 @@ ActiveRecord::Base.transaction do
     description: "Sleek and fast; you'll be first off the line!",
     picture_url: "http://68.media.tumblr.com/46934d1f8f9ac5c151c2763f08da5c48/tumblr_inline_mugwrzuTit1rvbuzu.jpg",
     cost: 35,
-    city: "San Francisco",
-    lat: 37.779760,
-    lng: -122.413820,
+    city: "Oakland",
+    lat: 37.801564,
+    lng: -122.273301,
     variety: "Road",
     featured: true
   )
@@ -73,9 +73,9 @@ ActiveRecord::Base.transaction do
     description: "A relaxed ride through town, with plenty of space for a few shopping bags..",
     picture_url: "https://s-media-cache-ak0.pinimg.com/564x/69/54/23/6954236364e74f8d859e1e3b34482214.jpg",
     cost: 25,
-    city: "San Francisco",
-    lat: 37.793349,
-    lng: -122.419838,
+    city: "Oakland",
+    lat: 37.804625,
+    lng: -122.263569,
     variety: "Cruiser",
     featured: true
   )
@@ -95,11 +95,11 @@ ActiveRecord::Base.transaction do
     description: "A sturdy downhill ride.  No frills, just thrills.",
     picture_url: "https://thumbor-static.factorymedia.com/IKmCwYN2kO8rB_O9vW7tEQDqd0s=/465x310/smart/http%3A%2F%2Fcdn.coresites.factorymedia.com%2Fdirt_new%2Fwp-content%2Fuploads%2F2011%2F09%2FP1030025.jpg",
     cost: 20,
-    city: "San Francisco",
-    lat: 37.764850,
-    lng: -122.398346,
+    city: "Berkeley",
+    lat: 37.865742,
+    lng: 122.270780,
     variety: "Mountain",
-    featured: true
+    featured: false
   )
 
   Bike.create!(
@@ -117,11 +117,11 @@ ActiveRecord::Base.transaction do
     description: "A Japanese-inspired single-speed cruiser.  You're a local with style!",
     picture_url: "http://7169-presscdn-0-61.pagely.netdna-cdn.com/wp-content/uploads/2013/04/level-mamachari-1.jpg",
     cost: 25,
-    city: "San Francisco",
-    lat: 37.757944,
-    lng: -122.388157,
+    city: "Berkeley",
+    lat: 37.867512,
+    lng: -122.267915,
     variety: "Cruiser",
-    featured: false
+    featured: true
   )
 
   User.all.each do |user|
