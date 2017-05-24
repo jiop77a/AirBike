@@ -36,8 +36,8 @@ export const clearReviewErrors = () => ({
   type: CLEAR_REVIEW_ERRORS
 });
 
-export const fetchBikes = () => dispatch => (
-  APIUtil.fetchBikes().then(bikes => (
+export const fetchBikes = filters => dispatch => (
+  APIUtil.fetchBikes(filters).then(bikes => (
     dispatch(receiveBikes(bikes))
   ))
 );

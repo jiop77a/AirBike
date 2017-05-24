@@ -3,15 +3,16 @@ import BikeMap from './bike_map';
 import FeaturedBikeItem from '../featured_bikes/featured_bike_item';
 import SearchBar from './search_bar.jsx';
 
-const Search = ({bikes, fetchAllBikes, searchBikes}) => (
+const Search = ({bikes, fetchAllBikes, searchBikes, updateFilter}) => (
   <div className="bar-and-botton">
     <div className="top-half">
-      <SearchBar searchBikes={searchBikes} />
+      <SearchBar searchBikes={searchBikes} updateFilter={updateFilter}/>
     </div>
   <div className="map-and-results">
     <div className ="left-half">
       <BikeMap
         fetchAllBikes={fetchAllBikes}
+        updateFilter={updateFilter}
         bikes={bikes}
         />
     </div>

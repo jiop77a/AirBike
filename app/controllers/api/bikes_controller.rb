@@ -1,9 +1,14 @@
 class Api::BikesController < ApplicationController
 
   def index
-      @bikes = Bike.all
-      @bikes = @bikes.where("variety = ?", params[:variety]) if params[:variety]
-      @bikes = @bikes.where("city ~ ?", params[:city]) if params[:city]
+    bounds = params[:bounds]
+    bikes = bounds ? Bike.in_bounds(bounds) : Bike.all
+
+    # bikes = bikes.where("variety = ?", params[:variety]) if params[:variety]
+    # bikes = bikes.where("city ~ ?", params[:city]) if params[:city]
+
+    @bikes = bikes
+
   end
 
   def show
