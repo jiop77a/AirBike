@@ -13,10 +13,10 @@ class MarkerManager {
       .filter(bike => !this.markers[bike.id])
       .forEach(newBike => this.createMarkerFromBike(newBike));
 
-    // Object.keys(this.markers)
-    //   .filter(bikeId => !bikesObj[bikeId])
-    //   .forEach((bikeId) => this.removeMarker(this.markers[bikeId]));
-  }
+    Object.keys(this.markers)
+      .filter(bikeId => !bikesObj[bikeId])
+      .forEach((bikeId) => this.removeMarker(this.markers[bikeId]));
+   }
 
   createMarkerFromBike(bike) {
     const position = new google.maps.LatLng(bike.lat, bike.lng);
