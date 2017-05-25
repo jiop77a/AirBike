@@ -13,6 +13,7 @@ import BikeDetailContainer from './bike_detail/bike_detail_container';
 import FeaturedBikeContainer from './featured_bikes/featured_bike_container';
 import SearchContainer from './search/search_container';
 import { SearchAndText } from './greeting/search_and_text';
+import { BookingsContainer } from './bookings/bookings_container';
 
 const App = () => (
   <div>
@@ -27,6 +28,7 @@ const App = () => (
       <Route exact path="/" component={FeaturedBikeContainer} />
       <Route path="/bikes/:bikeId" component={BikeDetailContainer} />
       <Route path="/search" component={SearchContainer} />
+      <Route path="/bookings/:userId" component={BookingsContainer} />
 
   </div>
 );
