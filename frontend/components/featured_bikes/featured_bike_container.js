@@ -1,14 +1,16 @@
 import { connect } from 'react-redux';
 import FeaturedBikes from './featured_bikes';
 import { selectFeaturedBikes } from '../../reducers/selectors';
-import { fetchBikes } from '../../actions/bike_actions';
+import { fetchAllBikes } from '../../actions/bike_actions';
+// import { updateFilter } from '../../actions/filter_actions';
 
 const mapStateToProps = state => ({
   bikes: selectFeaturedBikes(state)
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchBikes: () => dispatch(fetchBikes())
+  fetchAllBikes: () => dispatch(fetchAllBikes())
+  // updateFilter: () => dispatch(updateFilter())
 });
 
 export default connect(

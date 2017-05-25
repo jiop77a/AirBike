@@ -5,10 +5,11 @@ class Api::BikesController < ApplicationController
     bikes = bounds ? Bike.in_bounds(bounds) : Bike.all
     bikes = bikes.where("city ~ ?", params[:city]) if params[:city]
 
-    if (params[:variety] == "") || (params[:variety] == "Select Bike Type") || (params[:variety] == "All")
+    variety = params[:variety]
+    if (variety == "") || (variety == "Select Bike Type") || (variety == "All") || (!variety)
       @bikes = bikes
     else
-      @bikes = bikes.where("variety = ?", params[:variety])
+      @bikes = bikes.where("variety = ?", variety)
     end
   end
 

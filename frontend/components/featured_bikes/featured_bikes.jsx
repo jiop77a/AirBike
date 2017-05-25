@@ -3,7 +3,7 @@ import FeaturedBikeItem from './featured_bike_item';
 
 class FeaturedBikes extends Component {
   componentDidMount() {
-    this.props.fetchBikes();
+    this.props.fetchAllBikes();
   }
 
   render() {

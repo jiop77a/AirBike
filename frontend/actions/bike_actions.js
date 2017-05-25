@@ -42,11 +42,17 @@ export const fetchBikes = filters => dispatch => (
   ))
 );
 
-export const searchBikes = data => dispatch => (
-  APIUtil.fetchBikes(data).then(bikes => (
+export const fetchAllBikes = () => dispatch => (
+  APIUtil.fetchAllBikes().then(bikes => (
     dispatch(receiveBikes(bikes))
   ))
 );
+
+// export const searchBikes = data => dispatch => (
+//   APIUtil.fetchBikes(data).then(bikes => (
+//     dispatch(receiveBikes(bikes))
+//   ))
+// );
 
 export const fetchBike = id => dispatch => (
   APIUtil.fetchBike(id).then(bike => (
