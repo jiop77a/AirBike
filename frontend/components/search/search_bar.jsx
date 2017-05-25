@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -11,14 +12,10 @@ class SearchBar extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
   handleSubmit(e) {
     e.preventDefault();
-    this.props.searchBikes(this.state).then(() =>
-      this.setState({
-        city: "",
-        variety: ""
-      })
-    );
+    this.props.updateFilter('city', this.state.city);
   }
 
   update(property) {
@@ -36,7 +33,7 @@ class SearchBar extends React.Component {
               onChange={this.update('city')}
               className="city-input"
               />
-          
+
         </div>
         <div className="search-bar-variety">
           <select
@@ -57,4 +54,4 @@ class SearchBar extends React.Component {
   }
 }
 
-  export default SearchBar;
+  export default withRouter(SearchBar);

@@ -4,8 +4,8 @@ import { UPDATE_FILTER } from '../actions/filter_actions';
 
 const defaultFilters = Object.freeze({
   bounds: {},
-  city: "",
-  variety: ""
+  city: "San Francisco",
+  variety: null
 });
 
 const FiltersReducer = (state = defaultFilters, action) => {

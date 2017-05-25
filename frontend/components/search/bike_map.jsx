@@ -9,21 +9,45 @@ const getCoordsObj = latLng => ({
 });
 
 const mapOptions = {
-  center: {
-    lat: 37.773972,
-    lng: -122.431297
-  }, // San Francisco coords
-  zoom: 13
+  "San Francisco": {
+    center: {
+      lat: 37.773972,
+      lng: -122.431297
+    },
+    zoom: 13
+  },
+  "Oakland": {
+    center: {
+      lat: 37.812875,
+      lng: -122.274047,
+    },
+    zoom: 13
+  },
+  "Berkeley": {
+    center: {
+      lat: 37.867512,
+      lng: -122.267915,
+    },
+    zoom: 13
+  },
 };
 
 class BikeMap extends React.Component {
+
+  constructor(props){
+    super(props);
+  }
+
   componentDidMount() {
-    this.props.fetchAllBikes();
     const map = this.refs.map;
-    this.map = new google.maps.Map(map, mapOptions);
+    this.map = new google.maps.Map(map, mapOptions[this.props.city]);
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
     this.registerListeners();
     this.MarkerManager.updateMarkers(this.props.bikes);
+  }
+
+  componentWillReceiveProps(newProps){
+    this.map.setCenter(mapOptions[newProps.city].center);
   }
 
   componentDidUpdate() {
@@ -34,7 +58,7 @@ class BikeMap extends React.Component {
     google.maps.event.addListener(this.map, 'idle', () => {
       const { north, south, east, west } = this.map.getBounds().toJSON();
       const bounds = {
-        northEast: { lat:north, lng: east },
+        northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west } };
       this.props.updateFilter('bounds', bounds);
     });
