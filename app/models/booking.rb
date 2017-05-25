@@ -15,6 +15,7 @@ class Booking < ActiveRecord::Base
   validate :does_not_overlap
 
   def start_must_be_in_the_future
+    return if start_date > Date.today
     errors[:base] << "Booking must be in the future"
   end
 
@@ -23,10 +24,10 @@ class Booking < ActiveRecord::Base
     errors[:base] << "Start date must come before end date"
   end
 
-  def overlapping_requests
+  def overlapping_bookings
     Booking
      .where.not(id: self.id)
-     .where(bike_id: bike_id3)
+     .where(bike_id: bike_id)
      .where(<<-SQL, start_date: start_date, end_date: end_date)
         NOT( (start_date > :end_date) OR (end_date < :start_date) )
      SQL
@@ -35,7 +36,7 @@ class Booking < ActiveRecord::Base
   def does_not_overlap
 
     unless overlapping_bookings.empty?
-      errors[:base] << "Booking conflicts with existing request"
+      errors[:base] << "Bike is not available for those dates"
     end
 
   end

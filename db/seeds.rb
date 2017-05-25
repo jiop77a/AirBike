@@ -15,6 +15,16 @@ def create_random_review!(bike, user)
   )
 end
 
+def create_set_booking!(bike, user)
+  Booking.create!(
+  bike_id: bike.id,
+  user_id: user.id,
+  start_date: "2018/7/6",
+  end_date: "2018/7/16"
+  )
+end
+
+
 ActiveRecord::Base.transaction do
 
   User.delete_all
@@ -135,5 +145,25 @@ ActiveRecord::Base.transaction do
   username: "Guest",
   password: "password"
   )
+
+
+  Bike.all.each do |bike|
+    guest = User.last
+    create_set_booking!(bike, guest)
+  end
+
+  # Booking.create!(
+  #   bike_id: 1,
+  #   user_id: 1,
+  #   start_date: Faker::Date.forward(10),
+  #   end_date: Faker::Date.forward(20)
+  # )
+  #
+  # Booking.create!(
+  #   bike_id: 2,
+  #   user_id: 2,
+  #   start_date: Faker::Date.forward(10),
+  #   end_date: Faker::Date.forward(20)
+  # )
 
 end
