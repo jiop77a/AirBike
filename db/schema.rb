@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170521213950) do
+ActiveRecord::Schema.define(version: 20170525181836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 20170521213950) do
     t.float    "lat"
     t.float    "lng"
   end
+
+  create_table "bookings", force: :cascade do |t|
+    t.date     "start_date", null: false
+    t.date     "end_date",   null: false
+    t.integer  "bike_id",    null: false
+    t.integer  "user_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "bookings", ["bike_id"], name: "index_bookings_on_bike_id", using: :btree
+  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id", using: :btree
 
   create_table "reviews", force: :cascade do |t|
     t.string   "body",       default: "", null: false
