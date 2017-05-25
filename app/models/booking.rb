@@ -26,7 +26,7 @@ class Booking < ActiveRecord::Base
   def overlapping_requests
     Booking
      .where.not(id: self.id)
-     .where(bike_id: bike_id)
+     .where(bike_id: bike_id3)
      .where(<<-SQL, start_date: start_date, end_date: end_date)
         NOT( (start_date > :end_date) OR (end_date < :start_date) )
      SQL
