@@ -3,12 +3,13 @@ class Api::BikesController < ApplicationController
   def index
     bounds = params[:bounds]
     bikes = bounds ? Bike.in_bounds(bounds) : Bike.all
+    bikes = bikes.where("city ~ ?", params[:city]) if params[:city]
 
-    # bikes = bikes.where("variety = ?", params[:variety]) if params[:variety]
-    # bikes = bikes.where("city ~ ?", params[:city]) if params[:city]
-
-    @bikes = bikes
-
+    if (params[:variety] == "") || (params[:variety] == "Select Bike Type") || (params[:variety] == "All")
+      @bikes = bikes
+    else
+      @bikes = bikes.where("variety = ?", params[:variety])
+    end
   end
 
   def show

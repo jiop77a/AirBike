@@ -5,7 +5,7 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      city: "",
+      city: "San Francisco",
       variety: "Select Bike Type"
     };
 
@@ -16,6 +16,7 @@ class SearchBar extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.updateFilter('city', this.state.city);
+    this.props.updateFilter('variety', this.state.variety);
   }
 
   update(property) {
@@ -23,7 +24,7 @@ class SearchBar extends React.Component {
   }
 
   render() {
-    const bikeTypes = ["Select Bike Type", "Cruiser", "Mountain", "Road", "Eccentric"];
+    const bikeTypes = ["Select Bike Type", "All", "Cruiser", "Mountain", "Road", "Eccentric"];
     return (
       <form className="search-bar" onSubmit={this.handleSubmit}>
         <div className="search-bar-city">

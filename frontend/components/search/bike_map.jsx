@@ -59,7 +59,8 @@ class BikeMap extends React.Component {
       const { north, south, east, west } = this.map.getBounds().toJSON();
       const bounds = {
         northEast: { lat: north, lng: east },
-        southWest: { lat: south, lng: west } };
+        southWest: { lat: south, lng: west }
+      };
       this.props.updateFilter('bounds', bounds);
     });
   }

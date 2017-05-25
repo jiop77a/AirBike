@@ -97,7 +97,7 @@ ActiveRecord::Base.transaction do
     cost: 20,
     city: "Berkeley",
     lat: 37.865742,
-    lng: 122.270780,
+    lng: -122.270780,
     variety: "Mountain",
     featured: false
   )
