@@ -9,6 +9,7 @@ const personalGreeting = (currentUser, logout) => (
       <Link to="/"><img src="http://orbizadventure.com/wp-content/uploads/2016/05/Repair.jpg"></img></Link>
       <hgroup className="header-group">
         <h2 className="header-name">Hi, {currentUser.username}!</h2>
+        <Link className = "bookings-link" to={`/bookings/${currentUser.id}`}>Your Bookings</Link>
         <button className="header-button" onClick={logout}>Log Out</button>
       </hgroup>
     </header>

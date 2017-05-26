@@ -72,8 +72,15 @@ header, header hgroup {
   align-items: center;
 }
 
+.bookings-link {
+    color: blue;
+    text-decoration: underline;
+    margin-right: 10px;
+}
+
 h2.header-name {
   margin-right: 20px;
+
 }
 
 button, .header-button {
@@ -458,7 +465,7 @@ form.search-bar {
 //bookings page
 
 .bookings-container {
-  margin-left: 40px;
+  margin-left: 50px;
   margin-right: 10%;
   margin-top: 20px;
 }

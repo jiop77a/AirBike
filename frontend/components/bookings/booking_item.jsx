@@ -39,7 +39,7 @@ class BookingItem extends React.Component {
           </div>
           <div className="booking-price">
             <h1>Price</h1>
-            <h2>{booking.cost}</h2>
+            <h2>${booking.cost}</h2>
           </div>
         </div>
         <div className="delete-button">
