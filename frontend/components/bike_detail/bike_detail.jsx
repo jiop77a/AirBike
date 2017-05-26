@@ -57,8 +57,8 @@ class BikeDetail extends Component {
         <section className="details-and-form">
           <div className="detail-content">
             <div className="bike-detail-label">
-              <span>{bikeDetail.city}</span>
-              <span>Type: {bikeDetail.variety}</span>
+              <span><strong>{bikeDetail.city}</strong></span>
+              <span>Type: <strong>{bikeDetail.variety}</strong></span>
             </div>
             <div className="details-container">
               <h2>About This Bike</h2>

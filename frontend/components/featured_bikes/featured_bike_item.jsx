@@ -6,7 +6,7 @@ const FeaturedBikeItem = ({ bike }) => (
     <Link to={`/bikes/${bike.id}`}>
       <div className="featured-bike-label">
         <span>${bike.cost}</span>
-        <span>{bike.city}</span>
+        <span><strong>{bike.city}</strong></span>
       </div>
       <img src={bike.picture_url} alt={bike.description} />
     </Link>
