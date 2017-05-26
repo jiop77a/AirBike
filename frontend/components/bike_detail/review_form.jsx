@@ -21,7 +21,7 @@ class ReviewForm extends React.Component {
     e.preventDefault();
     const bike_id = parseInt(this.props.bikeId)
     const user_id = parseInt(this.props.user.id)
-    const review = merge({}, this.state, {bike_id}, {user_id})
+    const review = merge({}, this.state, {bike_id}, {user_id});
     this.props.createReview({review}).then(
       () => this.setState({
         rating: 10,

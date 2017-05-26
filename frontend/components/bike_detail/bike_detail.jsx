@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { values } from 'lodash';
 import ReviewItem from './review_item';
 import ReviewForm from './review_form';
+import BookingForm from '../bookings/booking_form';
 
 class BikeDetail extends Component {
   componentDidMount() {
@@ -12,6 +13,9 @@ class BikeDetail extends Component {
     if (parseInt(this.props.match.params.bikeId) !==  parseInt(nextProps.match.params.bikeId)) {
       this.props.fetchBike(parseInt(nextProps.match.params.bikeId));
 
+    if ((this.props.currentUser.id) !== (nextProps.currentUser.id)) {
+      this.props.fetchBookings(this.props.currentUser.id);
+      }
     }
   }
 
@@ -26,14 +30,22 @@ class BikeDetail extends Component {
   }
 
   render() {
-    const { bikeDetail, currentUser } = this.props;
+    const { bikeDetail, currentUser, createReview, clearReviewErrors, createBooking, bookingErrors, clearBookingErrors } = this.props;
     const { reviews } = bikeDetail;
 
     const optionalForm = (user) => {
       if (user) {
-        return <ReviewForm createReview = {this.props.createReview} user = {this.props.currentUser} bikeId = {this.props.bikeDetail.id} clearErrors = {this.props.clearReviewErrors}/>;
+        return <ReviewForm createReview = {createReview} user = {currentUser} bikeId = {bikeDetail.id} clearErrors = {clearReviewErrors}/>;
       } else {
         return <p>You must be logged in to leave a review</p>;
+      }
+    };
+
+    const optionalBookingForm = (user) => {
+      if (user) {
+        return <BookingForm createBooking = {createBooking} userId = {currentUser.id} bikeId = {bikeDetail.id} errors = {bookingErrors} clearErrors = {clearBookingErrors}/>;
+      } else {
+        return <p>You must be logged in to book this bike</p>;
       }
     };
 
@@ -55,8 +67,8 @@ class BikeDetail extends Component {
               </article>
             </div>
           </div>
-          <div className="booking-form">
-            Booking-form
+          <div className="booking-form-container">
+            {optionalBookingForm(Boolean(this.props.currentUser))}
           </div>
         </section>
         <section className="reviews-and-form">

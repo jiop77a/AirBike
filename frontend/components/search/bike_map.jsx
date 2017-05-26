@@ -66,7 +66,7 @@ class BikeMap extends React.Component {
   }
 
   handleMarkerClick(bike) {
-    alert(`You clicked bike #${bike.id}`);
+    this.props.history.push(`bikes/${bike.id}`);
   }
 
   render() {

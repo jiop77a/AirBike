@@ -52,7 +52,7 @@ header {
   padding: 10px;
   margin-left: 40px;
   margin-right: 10%;
-  margin-top: 20px;
+  padding-top: 30px;
   background-color: rgba(255, 255, 255, 0.4);
   width: 80%;
   min-width: 400px;
@@ -284,6 +284,7 @@ figure.bike-detail-figure {
 }
 
 section.bike-detail {
+    margin-top: 50px;
     margin-left: 40px;
     margin-bottom: 40px;
     max-width: 80%;
@@ -437,7 +438,7 @@ form.search-bar {
 .left-half {
   width: 50%;
   min-width: 500px;
-  height: calc(80vh - 30px);
+  height: calc(80vh - 150px);
   margin-right: 50px;
   margin-left: 50px;
 }
@@ -446,7 +447,7 @@ form.search-bar {
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: calc(80vh - 30px);
+  height: calc(80vh - 150px);
   overflow: auto;
 
   > h2 {
