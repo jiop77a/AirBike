@@ -11,3 +11,5 @@ export const selectFeaturedBikes = ({ bikes }) => {
 };
 
 export const selectAllBikes = ({ bikes }) => values(bikes);
+
+export const selectBookings = ({ bookings }) => values(bookings);
