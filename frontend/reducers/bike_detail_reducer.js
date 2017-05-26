@@ -28,7 +28,7 @@ export default (state = defaultBike, action) => {
       return newBike;
     case REMOVE_REVIEW:
       delete newBike.reviews[action.review.id];
-      // return newBike;
+      // return newBike (because waterfall)
     case CLEAR_REVIEW_ERRORS:
       newBike.errors = [];
       return newBike;
