@@ -456,3 +456,55 @@ form.search-bar {
 }
 
 //bookings page
+
+.bookings-container {
+  margin-left: 40px;
+  margin-right: 10%;
+  margin-top: 20px;
+}
+
+.bookings-list {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 30px;
+
+}
+.booking-item {
+  margin-right: 40px;
+  margin-top: 40px;
+}
+.booking-picture {
+
+ > a > img {
+  width: 200px;
+  height: 133px;
+
+  }
+ }
+
+ .booking-info {
+   > h1, h2 {
+     margin-bottom: 20px;
+   }
+
+  width: 200px;
+ }
+
+ .booking-dates {
+     display: flex;
+     justify-content: space-between;
+ }
+
+.date-item {
+  > h1 {
+    font-size: 20px;
+  }
+}
+
+.booking-price {
+  > h1 {
+    font-size: 20px;
+  }
+}
