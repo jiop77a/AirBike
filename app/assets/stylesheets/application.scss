@@ -293,9 +293,11 @@ section.bike-detail {
 section.details-and-form {
   margin-top: 20px;
   display: flex;
+  justify-content: space-around;
   max-width: 1000px;
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 50px;
   min-width: 600px;
 }
 
@@ -304,17 +306,29 @@ section.details-and-form {
 
 }
 
-.booking-form {
+.form-and-errors {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 400px;
-  min-width: 360px;
+  height: 300px;
+  min-width: 250px;
   align-items: center;
   border: 2px solid grey;
   width: 50%;
+
+  > form > div > h1 {
+    font-size: 20px;
+  }
+   > form > div {
+     margin-bottom: 20px;
+     }
 }
 
+.booking-form-errors {
+  > li {
+     color: darkred;
+  }
+}
 
 .bike-detail-label {
   display: flex;
@@ -351,9 +365,11 @@ article.bike-detail-description {
 }
 
 section.reviews-and-form {
-  margin-top: 20px;
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px dotted grey;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 1000px;
   margin-left: 10%;
   margin-right: 10%;
@@ -361,7 +377,10 @@ section.reviews-and-form {
 }
 
 .review-form-container {
-  width: 40%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   > p {
     color: darkred;

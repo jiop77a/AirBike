@@ -33,7 +33,7 @@ class BikeDetail extends Component {
     const { bikeDetail, currentUser, createReview, clearReviewErrors, createBooking, bookingErrors, clearBookingErrors } = this.props;
     const { reviews } = bikeDetail;
 
-    const optionalForm = (user) => {
+    const optionalReviewForm = (user) => {
       if (user) {
         return <ReviewForm createReview = {createReview} user = {currentUser} bikeId = {bikeDetail.id} clearErrors = {clearReviewErrors}/>;
       } else {
@@ -80,7 +80,7 @@ class BikeDetail extends Component {
           </div>
           <div className="review-form-container">
             <h2>Create Review</h2>
-            {optionalForm(Boolean(this.props.currentUser))}
+            {optionalReviewForm(Boolean(this.props.currentUser))}
             {this.renderErrors()}
           </div>
         </section>
