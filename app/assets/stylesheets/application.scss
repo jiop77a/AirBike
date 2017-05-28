@@ -487,10 +487,21 @@ select {
 
 form.search-bar {
     display: flex;
-    margin-left: 150px;
+    margin-left: 100px;
+    padding-left: 50px;
     margin-bottom: 50px;
     align-items: center;
     justify-content: space-around;
+}
+
+.search-bar-city {
+    display: flex;
+    justify-content: space-around;
+}
+
+.city-label {
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .search-bar-variety {
