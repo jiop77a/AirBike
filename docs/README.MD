@@ -1,4 +1,4 @@
-# Alex BnB
+# AirBike
 
 [Heroku](https://airbikeapp.herokuapp.com/#/)
 
@@ -6,7 +6,7 @@
 
 ## Minimum Viable Product
 
-Alex BnB (name TBD) is a web application inspired by AirBnB built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
+AirBike is a web application inspired by AirBnB built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
 - [ ] Hosting on Heroku
 - [ ] Production README
@@ -36,15 +36,15 @@ Alex BnB (name TBD) is a web application inspired by AirBnB built using Ruby on 
 
 ### Phase 2: Featured links on home page (2 days)**
 
-**Objective:** Root page features images (1/2 day), which link to spot show-pages (1.5 days)
+**Objective:** Root page features images (1/2 day), which link to bike show-pages (1.5 days)
 
 ### Phase 3: Reviews (1 day)**
 
-**Objective:** Users can add and delete (their own) reviews on the spot show-page
+**Objective:** Users can add and delete (their own) reviews on the bike show-page
 
 ### Phase 4: Search (2 days)**
 
-**Objective:** Users can search for spots by city, and see the results displayed on the map in the search-page; add date functionality during the 2nd half of day two, to be used in the next phase as well
+**Objective:** Users can search for bikes by city, and see the results displayed on the map in the search-page; add date functionality during the 2nd half of day two, to be used in the next phase as well
 
 ### Phase 5: Bookings (2 days)**
 
