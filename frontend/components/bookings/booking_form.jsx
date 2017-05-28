@@ -17,9 +17,10 @@ class BookingForm extends Component {
   }
 
   renderErrors() {
+    const errors = (this.props.errors || []);
     return(
       <ul className="booking-form-errors">
-        {this.props.errors.map((error, i) => (
+        {errors.map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
       </ul>
