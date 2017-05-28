@@ -25,16 +25,24 @@ class SearchBar extends React.Component {
 
   render() {
     const bikeTypes = ["Select Bike Type", "All", "Cruiser", "Mountain", "Road", "Eccentric"];
+    const cities = ["San Francisco", "Oakland", "Berkeley"];
+
     return (
       <form className="search-bar" onSubmit={this.handleSubmit}>
         <div className="search-bar-city">
-          <label>City:</label>
-            <input type="text"
-              value={this.state.city}
-              onChange={this.update('city')}
-              className="city-input"
-              />
 
+          <label>City:</label>
+          <select
+              value={this.state.city}
+              onChange={this.update('city')}>
+
+              {cities.map((city, i) => {
+                return <option value={city} key={i}>
+
+                  {city}
+              </option>;
+            })}
+          </select>
         </div>
         <div className="search-bar-variety">
           <select
