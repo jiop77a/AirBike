@@ -7,13 +7,6 @@ export const fetchBikes = data => (
   })
 );
 
-export const fetchAllBikes = () => (
-  $.ajax({
-    method: 'GET',
-    url: 'api/bikes'
-  })
-);
-
 export const fetchBike = id => (
   $.ajax({
     method: 'GET',

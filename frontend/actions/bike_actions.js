@@ -42,11 +42,6 @@ export const fetchBikes = filters => dispatch => (
   ))
 );
 
-export const fetchAllBikes = () => dispatch => (
-  APIUtil.fetchAllBikes().then(bikes => (
-    dispatch(receiveBikes(bikes))
-  ))
-);
 
 // export const searchBikes = data => dispatch => (
 //   APIUtil.fetchBikes(data).then(bikes => (
