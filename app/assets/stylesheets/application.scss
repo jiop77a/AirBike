@@ -97,7 +97,7 @@ button, .header-button, .promo-button {
   color: aliceblue;
 }
 
-button:hover, .header-button:hover {
+button:hover, .header-button:hover, .promo-button:hover {
   color: black;
 }
 
@@ -133,35 +133,13 @@ p.welcome-line-2 {
     margin-left: 50px;
 }
 
-form.search-bar {
-    display: flex;
-    margin-left: 100px;
-    margin-bottom: 50px;
-    align-items: center;
-    justify-content: space-around;
-    width: 40%;
-}
-
 .search-bar {
   display: flex;
   justify-content: center;
-}
-
-.search-bar-city {
-  > label {
-    font-size: 20px;
+  margin-top: 20px;
+  > a {
+    margin-left: 130px;
   }
-}
-input.city-input {
-    margin-left: 10px;
-    border-bottom: 1px solid grey;
-}
-
-.search-bar {
-    margin-top: 20px;
-    > a {
-      margin-left: 130px;
-    }
 }
 
 // login form
@@ -257,9 +235,6 @@ ul.session-errors {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-  }
-
-  > a:hover {
   }
 
   > a > img {
@@ -492,6 +467,7 @@ form.search-bar {
     margin-bottom: 50px;
     align-items: center;
     justify-content: space-around;
+    width: 40%;
 }
 
 .search-bar-city {
@@ -502,6 +478,11 @@ form.search-bar {
 .city-label {
   margin-right: 10px;
   font-size: 20px;
+}
+
+input.city-input {
+    margin-left: 10px;
+    border-bottom: 1px solid grey;
 }
 
 .search-bar-variety {
