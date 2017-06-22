@@ -48,7 +48,7 @@ ActiveRecord::Base.transaction do
 
   Bike.create!(
     description: "Add some attitude (and altitude) to your city cruise",
-    picture_url: "https://s-media-cache-ak0.pinimg.com/564x/28/1a/e4/281ae45e0d79aa8df2c9169f939a020d.jpg",
+    picture_url: "https://res.cloudinary.com/dol1mm8bd/image/upload/e_art:primavera/v1497903547/281ae45e0d79aa8df2c9169f939a020d_noaqgw.jpg",
     cost: 30,
     city: "San Francisco",
     lat: 37.775769,
@@ -59,7 +59,7 @@ ActiveRecord::Base.transaction do
 
   Bike.create!(
     description: "All your off-road dreams come true!",
-    picture_url: "http://cdn.vitalmtb.com/photos/users/600/photos/13641/s1600_upload1.jpg",
+    picture_url: "https://res.cloudinary.com/dol1mm8bd/image/upload/v1498157285/s1600_upload1_bz1e3t.jpg",
     cost: 20,
     city: "San Francisco",
     lat: 37.769996,
@@ -70,7 +70,7 @@ ActiveRecord::Base.transaction do
 
   Bike.create!(
     description: "Sleek and fast; you'll be first off the line!",
-    picture_url: "http://68.media.tumblr.com/46934d1f8f9ac5c151c2763f08da5c48/tumblr_inline_mugwrzuTit1rvbuzu.jpg",
+    picture_url: "https://res.cloudinary.com/dol1mm8bd/image/upload/v1498156174/tumblr_inline_mugwrzuTit1rvbuzu_haospu.jpg",
     cost: 35,
     city: "Oakland",
     lat: 37.801564,
@@ -81,7 +81,7 @@ ActiveRecord::Base.transaction do
 
   Bike.create!(
     description: "A relaxed ride through town, with plenty of space for a few shopping bags..",
-    picture_url: "https://s-media-cache-ak0.pinimg.com/564x/69/54/23/6954236364e74f8d859e1e3b34482214.jpg",
+    picture_url: "https://res.cloudinary.com/dol1mm8bd/image/upload/v1498156202/6954236364e74f8d859e1e3b34482214_t59lcl.jpg",
     cost: 25,
     city: "Oakland",
     lat: 37.804625,
@@ -92,7 +92,7 @@ ActiveRecord::Base.transaction do
 
   Bike.create!(
     description: "The best of the beach and the city!",
-    picture_url: "http://i108.photobucket.com/albums/n36/pete355/100_0007-1.jpg",
+    picture_url: "https://res.cloudinary.com/dol1mm8bd/image/upload/e_art:eucalyptus/v1498156301/100_0007-1_fp6ulr.jpg",
     cost: 30,
     city: "San Francisco",
     lat: 37.757595,
@@ -103,7 +103,7 @@ ActiveRecord::Base.transaction do
 
   Bike.create!(
     description: "A sturdy downhill ride.  No frills, just thrills.",
-    picture_url: "https://thumbor-static.factorymedia.com/IKmCwYN2kO8rB_O9vW7tEQDqd0s=/465x310/smart/http%3A%2F%2Fcdn.coresites.factorymedia.com%2Fdirt_new%2Fwp-content%2Fuploads%2F2011%2F09%2FP1030025.jpg",
+    picture_url: "https://res.cloudinary.com/dol1mm8bd/image/upload/v1498156317/http_3A_2F_2Fcdn.coresites.factorymedia.com_2Fdirt_new_2Fwp-content_2Fuploads_2F2011_2F09_2FP1030025_mnhgby.jpg",
     cost: 20,
     city: "Berkeley",
     lat: 37.865742,
@@ -114,7 +114,7 @@ ActiveRecord::Base.transaction do
 
   Bike.create!(
     description: "Stripped-down single-speed roadie.  Great for urban fun!",
-    picture_url: "http://3.bp.blogspot.com/-vHwoZSIAoT4/UX1m-xE61qI/AAAAAAAADP0/rNe6jpE0Yeg/s1600/20130427_151406.jpg",
+    picture_url: "https://res.cloudinary.com/dol1mm8bd/image/upload/v1498156337/20130427_151406_tbjfly.jpg",
     cost: 35,
     city: "San Francisco",
     lat: 37.767490,
@@ -125,7 +125,7 @@ ActiveRecord::Base.transaction do
 
   Bike.create!(
     description: "A Japanese-inspired single-speed cruiser.  You're a local with style!",
-    picture_url: "http://7169-presscdn-0-61.pagely.netdna-cdn.com/wp-content/uploads/2013/04/level-mamachari-1.jpg",
+    picture_url: "https://res.cloudinary.com/dol1mm8bd/image/upload/v1498156354/level-mamachari-1_ln3llo.jpg",
     cost: 25,
     city: "Berkeley",
     lat: 37.867512,
