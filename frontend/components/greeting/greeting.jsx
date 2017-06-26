@@ -50,7 +50,9 @@ class Greeting extends Component {
         </hgroup>
       </header>
       <Modal
-        isOpen={this.state.modalOpen}>
+        isOpen={this.state.modalOpen}
+        contentLabel="Signup and Login"
+        onRequestClose={this.onModalClose.bind(this)}>
         ...content
       </Modal>
     </div>);
@@ -59,6 +61,12 @@ class Greeting extends Component {
   handleClick() {
     this.setState({
       modalOpen: true
+    });
+  }
+
+  onModalClose() {
+    this.setState({
+      modalOpen: false
     });
   }
 
