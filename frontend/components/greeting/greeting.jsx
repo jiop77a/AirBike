@@ -1,5 +1,5 @@
-
-import React from 'react';
+import Modal from 'react-modal';
+import React, { Component } from 'react';
 import { Link, Redirect, Route } from 'react-router-dom';
 import BikeDetailContainer from '../bike_detail/bike_detail_container';
 
@@ -16,22 +16,59 @@ const personalGreeting = (currentUser, logout) => (
   </div>
 );
 
-const impersonalGreeting = () => (
-  <div>
-    <header>
-      <Link to="/"><img src="http://orbizadventure.com/wp-content/uploads/2016/05/Repair.jpg"></img></Link>
-      <hgroup className="header-group">
-        <Link to="/signup" className="header-button">Sign Up</Link>
-        <Link to="/login" className="header-button">Log In</Link>
-      </hgroup>
-    </header>
-  </div>
-);
 
 
-const Greeting = ({ currentUser, logout }) => (
-  currentUser ? personalGreeting(currentUser, logout) :
-  impersonalGreeting()
-);
+class Greeting extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modalOpen: false
+    };
+}
+
+  impersonalGreeting() {
+    return (
+    <div>
+      <header>
+        <Link to="/">
+          <img
+            src=
+            "http://orbizadventure.com/wp-content/uploads/2016/05/Repair.jpg">
+          </img>
+        </Link>
+        <hgroup className="header-group">
+          <button
+            onClick={this.handleClick.bind(this)}
+            className="header-button">
+            Sign Up
+          </button>
+          <button
+            onClick={this.handleClick.bind(this)}
+            className="header-button">
+            Log In
+          </button>
+        </hgroup>
+      </header>
+      <Modal
+        isOpen={this.state.modalOpen}>
+        ...content
+      </Modal>
+    </div>);
+  }
+
+  handleClick() {
+    this.setState({
+      modalOpen: true
+    });
+  }
+
+  render() {
+    const { currentUser, logout } = this.props;
+    return (
+      currentUser ? personalGreeting(currentUser, logout) :
+      this.impersonalGreeting.bind(this)()
+    );
+  }
+}
 
 export default Greeting;
