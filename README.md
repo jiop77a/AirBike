@@ -1,6 +1,6 @@
 # AirBike
 
-[Live App](https://airbikeapp.herokuapp.com/#/)
+[Live App](https://www.airbike.life/#/)
 
 AirBike is a full-stack web app inspired by AirBnB.  I love the convenience and functionality of AirBnb, but realized that when I arrive in a new city (particularly one with a dense urban core and decent cycling culture) the task of renting a bike becomes nearly as pressing as that of finding a place to stay.
 
