@@ -16,6 +16,8 @@
 
 // scss variables
   $pink: #fd5c63;
+  $grey: #484848;
+  $promo-font:  Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 
  html, body, header, h1, h2, p, ul, li,
  button, div, nav, section, form, input, a, label,
@@ -56,8 +58,7 @@ h1 {
 header {
   // border: 2px solid gray;
   padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
   background-color: rgba(255, 255, 255, 0.4);
   min-width: 400px;
 
@@ -103,17 +104,19 @@ h2.header-name {
   }
 
 button, .promo-button {
-  padding: 10px;
+  padding: 15px;
   cursor: pointer;
-  border-radius: 9px;
-  background-color: darkcyan;
-  font-size: 20px;
-  color: aliceblue;
+  border-radius: 4px;
+  background-color: $pink;
+  font-size: 19px;
+  font-family: $promo-font;
+  font-weight: 100;
+  color: #ffffff;
 }
 
-button:hover, .header-button:hover, .promo-button:hover {
-  color: black;
-}
+// button:hover, .header-button:hover, .promo-button:hover {
+//   color: black;
+// }
 
 .header-button:last-of-type {
   margin-left: 10px;
@@ -124,27 +127,39 @@ button:hover, .header-button:hover, .promo-button:hover {
 section.search-and-text {
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 64px;
     width: 80%;
-    padding: 10px;
 }
 
 .promo-text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
 }
 
+
 p.welcome-line-1 {
-    font-size: 50px;
-    margin-right: 150px;
-    margin-bottom: 20px;
+    color: $pink;
+    font-size: 48px;
+    font-weight: 600;
+    font-family: $promo-font;
+
 }
 
 p.welcome-line-2 {
-    font-size: 30px;
-    margin-left: 50px;
+    font-size: 48px;
+    font-family: $promo-font;
+    font-weight: 200;
+    color: $grey
+
+}
+
+.promo-text-container {
+  padding-right: 30%;
+  margin-bottom: 100px;
 }
 
 .search-bar {
@@ -152,7 +167,7 @@ p.welcome-line-2 {
   justify-content: center;
   margin-top: 20px;
   > a {
-    margin-left: 130px;
+
   }
 }
 
