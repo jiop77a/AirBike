@@ -7,22 +7,30 @@ export const Footer = () => (
     <div className="footer-content">
       <div className="column-section">
         <div className="column-one">
-          <p>AirBike</p>
-          <Link to="" className="footer-link">Lorem!</Link>
-          <Link to="" className="footer-link">Lorem!</Link>
-          <Link to="" className="footer-link">Lorem!</Link>
-          <Link to="" className="footer-link">Lorem!</Link>
+          <p className="column-name">AirBike</p>
+          <Link to="" className="footer-link">About us</Link>
+          <Link to="" className="footer-link">Careers</Link>
+          <Link to="" className="footer-link">Press</Link>
+          <Link to="" className="footer-link">Policies</Link>
+          <Link to="" className="footer-link">Help</Link>
+          <Link to="" className="footer-link">Diversity & Belonging</Link>
         </div>
         <div className="column-two">
-          <p>Discover</p>
-          <Link to="" className="footer-link">Lorem!</Link>
-          <Link to="" className="footer-link">Lorem!</Link>
-          <Link to="" className="footer-link">Lorem!</Link>
-          <Link to="" className="footer-link">Lorem!</Link>
+          <p className="column-name">Building</p>
+          <Link to="" className="footer-link">Why Build</Link>
+          <Link to="" className="footer-link">Hospitality</Link>
+          <Link to="" className="footer-link">Responsible Building</Link>
+          <Link to="" className="footer-link">Community Center</Link>
         </div>
       </div>
       <div className="footy-foot">
-        <p>Footy-foot is working</p>
+        <div className="footy-left">
+          <img src='https://res.cloudinary.com/dol1mm8bd/image/upload/v1502836769/Repair_grey_rz0bky.jpg'/><p>AirBike</p>
+        </div>
+        <div className="footy-right">
+          <img src='https://res.cloudinary.com/dol1mm8bd/image/upload/v1502836914/linkedin-logo-copy_miy0hz.png'/>
+          <img src='https://res.cloudinary.com/dol1mm8bd/image/upload/v1502836925/icons8-GitHub-64_wdf2p9.png'/>
+        </div>
       </div>
     </div>
   </section>
