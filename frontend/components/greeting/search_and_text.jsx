@@ -11,7 +11,7 @@ export const SearchAndText = () => (
       </div>
     </div>
     <div className='search-bar'>
-      <Link to="/search" className="promo-button">Find a bike today!</Link>
+      <Link to="/search" className="promo-button">Search</Link>
     </div>
   </section>
 );

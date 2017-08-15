@@ -90,20 +90,20 @@ h2.header-name {
 
 }
 
-// .nav-link {
-//   font-size: 14px;
-//   color: rgba(72, 72, 72, 0.9);
-//   margin-left: 16px;
-//   margin-right: 16px;
-//   padding-bottom: 13px;
-// }
+.nav-link {
+  font-size: 14px;
+  color: rgba(72, 72, 72, 0.9);
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-bottom: 13px;
+}
 
 .nav-link:hover {
     border-bottom: 3px solid rgba(72, 72, 72, 0.7);
     padding-bottom: 10px
   }
 
-button, .promo-button, .nav-link {
+button, .promo-button {
   padding: 15px;
   cursor: pointer;
   border-radius: 4px;
@@ -112,6 +112,7 @@ button, .promo-button, .nav-link {
   font-family: $promo-font;
   font-weight: 100;
   color: #ffffff;
+  margin-right: 20px;
 }
 
 // button:hover, .header-button:hover, .promo-button:hover {
@@ -202,10 +203,12 @@ hr {
 
 section.search-and-text {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     margin-left: 7%;
     margin-right: 7%;
     margin-top: 64px;
+    margin-bottom: 64px;
     width: 80%;
 }
 
@@ -235,7 +238,6 @@ p.welcome-line-2 {
 
 .promo-text-container {
   padding-right: 30%;
-  margin-bottom: 100px;
 }
 
 .search-bar {
@@ -315,6 +317,7 @@ ul.session-errors {
 // featured bikes
 
 .featured-bikes-container {
+  border-top: 1px solid rgba(72, 72, 72, 0.2);
   display: flex;
   flex-direction: column;
   margin-left: 7%;
