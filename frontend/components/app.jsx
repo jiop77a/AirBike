@@ -7,6 +7,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 import GreetingContainer from './greeting/greeting_container';
+import { Footer } from './greeting/footer';
 import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import BikeDetailContainer from './bike_detail/bike_detail_container';
@@ -29,6 +30,7 @@ const App = () => (
       <Route path="/bikes/:bikeId" component={BikeDetailContainer} />
       <Route path="/search" component={SearchContainer} />
       <ProtectedRoute path="/bookings/:userId" component={BookingsContainer} />
+      <Route path="/" component={Footer} />
   </div>
 );
 
