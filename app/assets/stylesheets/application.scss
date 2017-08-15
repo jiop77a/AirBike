@@ -53,7 +53,7 @@ html, body {
 h1 {
   font-size: 30px;
 }
-// header and buttons
+// header, footer and buttons
 
 header {
   // border: 2px solid gray;
@@ -120,6 +120,38 @@ button, .promo-button, .nav-link {
 
 .header-button:last-of-type {
   margin-left: 10px;
+}
+
+.footer {
+  margin-left: 7%;
+  margin-right: 7%;
+  width: 80%;
+  padding: 48px 24px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footy-foot {
+  border-top: 1px solid $grey;
+}
+
+.column-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.column-one {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-two {
+    display: flex;
+    flex-direction: column;
 }
 
 //Search and Text
@@ -241,9 +273,9 @@ ul.session-errors {
 .featured-bikes-container {
   display: flex;
   flex-direction: column;
-  margin: 40px;
+  margin-left: 7%;
+  margin-right: 7%;
   width: 80%;
-  padding: 10px;
   background-color: rgba(255, 255, 255, 0.4);
   // border: 2px solid gray;
 
