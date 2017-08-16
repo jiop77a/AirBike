@@ -9,7 +9,7 @@ const personalGreeting = (currentUser, logout) => (
       <Link to="/"><img src="https://res.cloudinary.com/dol1mm8bd/image/upload/v1502223298/Repair_luqkgb_plrcpv.png"></img></Link>
       <hgroup className="header-group">
         <h2 className="header-name">Hi, {currentUser.username}!</h2>
-        <Link className = "bookings-link" to={`/bookings/${currentUser.id}`}>Your Bookings</Link>
+        <Link className = "nav-link" to={`/bookings/${currentUser.id}`}>Your Bookings</Link>
         <button className="nav-link" onClick={logout}>Log Out</button>
       </hgroup>
     </header>
