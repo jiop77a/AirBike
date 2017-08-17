@@ -30,8 +30,6 @@ const App = () => (
       <Route path="/bikes/:bikeId" component={BikeDetailContainer} />
       <Route path="/search" component={SearchContainer} />
       <ProtectedRoute path="/bookings/:userId" component={BookingsContainer} />
-      <hr></hr>
-      <Route path="/" component={Footer} />
   </div>
 );
 
