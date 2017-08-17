@@ -3,6 +3,7 @@ import { values } from 'lodash';
 import ReviewItem from './review_item';
 import ReviewForm from './review_form';
 import BookingForm from '../bookings/booking_form';
+import { Footer } from '../greeting/footer';
 
 class BikeDetail extends Component {
   componentDidMount() {

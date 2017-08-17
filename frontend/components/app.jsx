@@ -22,7 +22,7 @@ const App = () => (
     <Switch>
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
-      <Route path="/" component={GreetingContainer} />
+      <Route component={GreetingContainer} />
     </Switch>
 
       <Route exact path="/" component={SearchAndText} />
@@ -30,6 +30,16 @@ const App = () => (
       <Route path="/bikes/:bikeId" component={BikeDetailContainer} />
       <Route path="/search" component={SearchContainer} />
       <ProtectedRoute path="/bookings/:userId" component={BookingsContainer} />
+      
+      <hr></hr>
+
+      <Switch>
+        <Route exact path="/" component={Footer} />
+        <Route path="/bikes/:bikeId" component={Footer} />
+        <Route path="/search" component={Footer} />
+        <ProtectedRoute path="/bookings/:userId" component={Footer} />
+      </Switch>
+
   </div>
 );
 
