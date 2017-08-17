@@ -101,8 +101,8 @@ class SessionForm extends React.Component {
               </label>
               <br/>
               <nav className="button-nav">
-                <button onClick={this.handleSubmit}>{semanticForm}</button>
-                <button className="demo-button" onClick={this.handleGuest}>Demo Login</button>
+                <button className="promo-button" onClick={this.handleSubmit}>{semanticForm}</button>
+                <button className="promo-button" onClick={this.handleGuest}>Demo Login</button>
               </nav>
             </section>
           </form>
