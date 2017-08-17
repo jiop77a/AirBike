@@ -2,6 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
+const bikeLogo = 'https://res.cloudinary.com/dol1mm8bd/image/upload/v1502836769/Repair_grey_rz0bky.jpg'
+
+const linkedIn = 'https://res.cloudinary.com/dol1mm8bd/image/upload/v1502836914/linkedin-logo-copy_miy0hz.png'
+
+const gitHub = 'https://res.cloudinary.com/dol1mm8bd/image/upload/v1502836925/icons8-GitHub-64_wdf2p9.png'
+
 export const Footer = () => (
   <section className="footer">
     <div className="footer-content">
@@ -25,11 +31,11 @@ export const Footer = () => (
       </div>
       <div className="footy-foot">
         <div className="footy-left">
-          <img src='https://res.cloudinary.com/dol1mm8bd/image/upload/v1502836769/Repair_grey_rz0bky.jpg'/><p>AirBike</p>
+          <img src={bikeLogo}/><p>AirBike</p>
         </div>
         <div className="footy-right">
-          <img src='https://res.cloudinary.com/dol1mm8bd/image/upload/v1502836914/linkedin-logo-copy_miy0hz.png'/>
-          <img src='https://res.cloudinary.com/dol1mm8bd/image/upload/v1502836925/icons8-GitHub-64_wdf2p9.png'/>
+          <img src={linkedIn}/>
+          <img src={gitHub}/>
         </div>
       </div>
     </div>

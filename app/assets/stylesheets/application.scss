@@ -157,12 +157,13 @@ hr {
 
 .footy-left {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding: 5px;
     width: 10%;
 
     > img {
       height: 20px;
+      margin-right: 10px;
     }
 }
 
@@ -170,10 +171,14 @@ hr {
     width: 5%;
     display: flex;
     padding: 5px;
-    justify-content: space-around;
+    justify-content: flex-end;
 
     > img {
       height: 20px;
+    }
+
+    > img:last-of-type {
+      margin-left: 10px
     }
 }
 
