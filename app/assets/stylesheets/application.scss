@@ -173,11 +173,11 @@ hr {
     padding: 5px;
     justify-content: flex-end;
 
-    > img {
+    > a > img {
       height: 20px;
     }
 
-    > img:last-of-type {
+    > a > img:last-of-type {
       margin-left: 10px
     }
 }

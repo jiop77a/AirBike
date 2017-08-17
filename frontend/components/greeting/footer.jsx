@@ -8,6 +8,10 @@ const linkedIn = 'https://res.cloudinary.com/dol1mm8bd/image/upload/v1502836914/
 
 const gitHub = 'https://res.cloudinary.com/dol1mm8bd/image/upload/v1502836925/icons8-GitHub-64_wdf2p9.png'
 
+const myGitHub = 'https://github.com/jiop77a'
+
+const myLinkedIn = 'https://www.linkedin.com/in/alex-scott-a77b1513b/'
+
 export const Footer = () => (
   <section className="footer">
     <div className="footer-content">
@@ -34,8 +38,8 @@ export const Footer = () => (
           <img src={bikeLogo}/><p>AirBike</p>
         </div>
         <div className="footy-right">
-          <img src={linkedIn}/>
-          <img src={gitHub}/>
+          <a href={myGitHub}><img src={gitHub}/></a>
+          <a href={myLinkedIn}><img src={linkedIn}/></a>
         </div>
       </div>
     </div>
