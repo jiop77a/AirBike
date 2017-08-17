@@ -642,20 +642,20 @@ input.city-input {
 .map-and-results {
   display: flex;
   flex-direction: row;
+  margin-bottom: 200px;
+  justify-content: space-evenly;
 }
 
 .left-half {
-  width: 50%;
+  width: 45%;
   min-width: 500px;
   height: calc(80vh - 150px);
-  margin-right: 50px;
-  margin-left: 100px;
 }
 
 .right-half {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 45%;
   height: calc(80vh - 150px);
   overflow: auto;
 
@@ -680,7 +680,7 @@ input.city-input {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 .bookings-list {
