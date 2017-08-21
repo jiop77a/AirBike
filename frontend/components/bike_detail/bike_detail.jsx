@@ -52,39 +52,42 @@ class BikeDetail extends Component {
 
     return (
       <section className="bike-detail">
+        <section className="details-and-reviews">
+
+          <section className="details-and-form">
+            <div className="detail-content">
+              <div className="bike-detail-label">
+                <span><strong>{bikeDetail.city}</strong></span>
+                <span>Type: <strong>{bikeDetail.variety}</strong></span>
+              </div>
+              <div className="details-container">
+                <h2>About This Bike</h2>
+                <article className="bike-detail-description">
+                  {bikeDetail.description}
+                </article>
+              </div>
+            </div>
+            <div className="booking-form-container">
+              {optionalBookingForm(Boolean(this.props.currentUser))}
+            </div>
+          </section>
+          <section className="reviews-and-form">
+            <div className="review-list">
+              <h2>Reviews</h2>
+              <ul className="review-items">
+                {values(reviews).map(review => <ReviewItem key = {review.id} review = {review} user = {this.props.currentUser} deleteReview = {this.props.deleteReview}/>)}
+              </ul>
+            </div>
+            <div className="review-form-container">
+              <h2>Create Review</h2>
+              {optionalReviewForm(Boolean(this.props.currentUser))}
+              {this.renderErrors()}
+            </div>
+          </section>
+        </section>
         <figure className="bike-detail-figure">
           <img src ={bikeDetail.picture_url} alt={bikeDetail.description} />
         </figure>
-        <section className="details-and-form">
-          <div className="detail-content">
-            <div className="bike-detail-label">
-              <span><strong>{bikeDetail.city}</strong></span>
-              <span>Type: <strong>{bikeDetail.variety}</strong></span>
-            </div>
-            <div className="details-container">
-              <h2>About This Bike</h2>
-              <article className="bike-detail-description">
-                {bikeDetail.description}
-              </article>
-            </div>
-          </div>
-          <div className="booking-form-container">
-            {optionalBookingForm(Boolean(this.props.currentUser))}
-          </div>
-        </section>
-        <section className="reviews-and-form">
-          <div className="review-list">
-            <h2>Reviews</h2>
-            <ul className="review-items">
-              {values(reviews).map(review => <ReviewItem key = {review.id} review = {review} user = {this.props.currentUser} deleteReview = {this.props.deleteReview}/>)}
-            </ul>
-          </div>
-          <div className="review-form-container">
-            <h2>Create Review</h2>
-            {optionalReviewForm(Boolean(this.props.currentUser))}
-            {this.renderErrors()}
-          </div>
-        </section>
       </section>
 
 
