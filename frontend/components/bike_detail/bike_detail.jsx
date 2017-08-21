@@ -67,9 +67,6 @@ class BikeDetail extends Component {
                 </article>
               </div>
             </div>
-            <div className="booking-form-container">
-              {optionalBookingForm(Boolean(this.props.currentUser))}
-            </div>
           </section>
           <section className="reviews-and-form">
             <div className="review-list">
@@ -85,9 +82,12 @@ class BikeDetail extends Component {
             </div>
           </section>
         </section>
-        <figure className="bike-detail-figure">
+        <section className="bike-detail-figure">
           <img src ={bikeDetail.picture_url} alt={bikeDetail.description} />
-        </figure>
+          <div className="booking-form-container">
+            {optionalBookingForm(Boolean(this.props.currentUser))}
+          </div>
+        </section>
       </section>
 
 

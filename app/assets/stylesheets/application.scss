@@ -417,27 +417,29 @@ ul.session-errors {
 
 //bike showpage
 
-figure.bike-detail-figure {
+section.bike-detail-figure {
   display: flex;
   flex-direction: column;
   max-width: 1000px;
-  margin-left: 10%;
-  margin-right: 10%;
-  min-width: 600px;
+  width: 33%;
 
   > img {
     max-height: 500px;
     display: block;
     width: 100%;
-    height: auto;
   }
 }
 
 section.bike-detail {
+    display: flex;
     margin-top: 50px;
     margin-left: 10%;
     margin-bottom: 200px;
     margin-right: 10%;
+}
+
+section.details-and-reviews {
+  width: 66%
 }
 
 section.details-and-form {
