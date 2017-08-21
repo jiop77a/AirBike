@@ -43,7 +43,7 @@ class BookingItem extends React.Component {
           </div>
         </div>
         <div className="delete-button">
-          <button className="promo-button" Click = { this.remove }>Cancel</button>
+          <button className= "promo-button" onClick = { this.remove }>Cancel</button>
         </div>
       </li>
     );
