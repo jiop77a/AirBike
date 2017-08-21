@@ -60,7 +60,7 @@ class ReviewForm extends React.Component {
           />
         </div>
         <br/>
-        <button className="create-button">Submit</button>
+        <button className="promo-button">Submit</button>
       </form>
     );
   }

@@ -62,7 +62,7 @@ class BookingForm extends Component {
              onChange={this.update("end_date")}
              />
          </div>
-         <button className="booking-button">Book Now</button>
+         <button className="promo-button">Book Now</button>
        </form>
        {this.renderErrors()}
      </div>
