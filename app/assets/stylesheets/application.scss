@@ -431,11 +431,16 @@ section.bike-detail-figure {
   }
 }
 
+#noFix {
+  position: static;
+  justify-content: flex-end;
+}
+
 section.bike-detail {
     display: flex;
     margin-top: 50px;
     margin-left: 10%;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     margin-right: 10%;
 }
 

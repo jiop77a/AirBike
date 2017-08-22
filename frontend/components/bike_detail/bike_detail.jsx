@@ -35,8 +35,7 @@ class BikeDetail extends Component {
   }
 
   handleScroll() {
-    let scrollTop = $(window).scrollTop();
-
+    let scrollTop = $(document).scrollTop();
     this.setState({
       pos: scrollTop
     });
@@ -50,6 +49,18 @@ class BikeDetail extends Component {
         ))}
       </ul>
     );
+  }
+
+  newId() {
+    // console.log(this.state.pos);
+    let height = $(document).height();
+    let pos = this.state.pos;
+    console.log(pos);
+    if ((pos + 675.67) > (height - 372.67)) {
+      return 'noFix';
+    } else {
+      return '';
+    }
   }
 
   render() {
@@ -104,7 +115,7 @@ class BikeDetail extends Component {
             </div>
           </section>
         </section>
-        <section className="bike-detail-figure">
+        <section className="bike-detail-figure" id={this.newId()}>
           <img src ={bikeDetail.picture_url} alt={bikeDetail.description} />
           <div className="booking-form-container">
             {optionalBookingForm(Boolean(this.props.currentUser))}
