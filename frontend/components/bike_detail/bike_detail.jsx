@@ -6,9 +6,23 @@ import BookingForm from '../bookings/booking_form';
 import { Footer } from '../greeting/footer';
 
 class BikeDetail extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pos: 0
+    };
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
   componentDidMount() {
     this.props.fetchBike(parseInt(this.props.match.params.bikeId));
+    window.addEventListener('scroll', this.handleScroll);
   }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
 
   componentWillReceiveProps(nextProps) {
     if (parseInt(this.props.match.params.bikeId) !==  parseInt(nextProps.match.params.bikeId)) {
@@ -18,6 +32,14 @@ class BikeDetail extends Component {
       this.props.fetchBookings(this.props.currentUser.id);
       }
     }
+  }
+
+  handleScroll() {
+    let scrollTop = $(window).scrollTop();
+
+    this.setState({
+      pos: scrollTop
+    });
   }
 
   renderErrors() {
