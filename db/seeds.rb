@@ -24,21 +24,18 @@ def create_set_booking!(bike, user)
   )
 end
 
+USER_NAMES = ["Frank", "Gus", "Susan", "Laverne"].freeze
 
 ActiveRecord::Base.transaction do
 
   User.delete_all
 
-
-  User.create!(
-    username: "Frank",
+  USER_NAMES.each do |name|
+    User.create!(
+    username: name,
     password: "password"
-  )
-
-  User.create!(
-    username: "Gus",
-    password: "password"
-  )
+    )
+  end
 
 end
 

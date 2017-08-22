@@ -420,14 +420,14 @@ ul.session-errors {
 section.bike-detail-figure {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
-  flex: 1 33%;
+  flex: 0 33%;
   position: fixed;
-  left: 66%;
+  left: 62.8%;
 
   > img {
-    max-height: 500px;
-    width: 100%;
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
   }
 }
 
@@ -468,11 +468,11 @@ section.details-and-form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  box-sizing: border-box;
   height: 300px;
-  min-width: 250px;
+  width: 350px;
   align-items: center;
   border: 1px solid $pink;
-  width: 50%;
   padding: 10px;
 
   > form > div > h1 {
@@ -538,6 +538,7 @@ section.reviews-and-form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  box-sizing: border-box;
   max-width: 1000px;
   margin-left: 10%;
   margin-right: 10%;

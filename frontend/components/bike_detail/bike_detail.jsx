@@ -56,7 +56,7 @@ class BikeDetail extends Component {
     let height = $(document).height();
     let pos = this.state.pos;
     console.log(pos);
-    if ((pos + 675.67) > (height - 372.67)) {
+    if ((pos + 678) > (height - 372.67)) {
       return 'noFix';
     } else {
       return '';
