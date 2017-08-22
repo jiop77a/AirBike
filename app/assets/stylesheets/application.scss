@@ -422,6 +422,8 @@ section.bike-detail-figure {
   flex-direction: column;
   max-width: 300px;
   flex: 1 33%;
+  position: fixed;
+  left: 66%;
 
   > img {
     max-height: 500px;
@@ -438,7 +440,7 @@ section.bike-detail {
 }
 
 section.details-and-reviews {
-  flex: 3 66%;
+  flex: 0 66%;
 }
 
 section.details-and-form {
