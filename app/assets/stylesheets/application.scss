@@ -420,9 +420,8 @@ ul.session-errors {
 section.bike-detail-figure {
   display: flex;
   flex-direction: column;
-  flex: 0 33%;
   position: fixed;
-  left: 62.8%;
+  right: calc((100vw - 1050px)/2);
 
   > img {
     width: 350px;
@@ -438,14 +437,15 @@ section.bike-detail-figure {
 
 section.bike-detail {
     display: flex;
+    width: 1050px;
     margin-top: 50px;
-    margin-left: 10%;
+    margin-left: auto;
     margin-bottom: 100px;
-    margin-right: 10%;
+    margin-right: auto;
 }
 
 section.details-and-reviews {
-  flex: 0 66%;
+  width: 700px;
 }
 
 section.details-and-form {
