@@ -86,6 +86,8 @@ class BikeDetail extends Component {
       }
     };
 
+    const dotspace = " · ";
+
     return (
       <section className="bike-detail">
         <section className="details-and-reviews">
@@ -93,14 +95,16 @@ class BikeDetail extends Component {
           <section className="details-and-form">
             <div className="detail-content">
               <div className="bike-detail-label">
-                <span><strong>{bikeDetail.city}</strong></span>
-                <span>Type: <strong>{bikeDetail.variety}</strong></span>
+                <div id="description">{bikeDetail.description}</div>
+                <div id="city">
+                  {bikeDetail.city}{dotspace}
+                  <span id="type">{bikeDetail.variety} Bike</span>
+                </div>
               </div>
               <div className="details-container">
-                <h2>About This Bike</h2>
-                <article className="bike-detail-description">
-                  {bikeDetail.description}
-                </article>
+                <div className="bike-type">
+                  <span></span>
+                </div>
               </div>
             </div>
           </section>
