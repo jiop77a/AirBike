@@ -421,6 +421,7 @@ section.bike-detail-figure {
   display: flex;
   flex-direction: column;
   position: fixed;
+  top: 20px;
   right: calc((100vw - 1050px)/2);
 
   > img {
@@ -430,9 +431,14 @@ section.bike-detail-figure {
   }
 }
 
-#noFix {
+#noFixLow {
   position: static;
   justify-content: flex-end;
+}
+
+#noFixHi {
+  position: static;
+  justify-content: flex-start;
 }
 
 section.bike-detail {
