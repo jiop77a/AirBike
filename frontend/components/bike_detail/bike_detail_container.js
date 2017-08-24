@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import BikeDetail from './bike_detail';
 import { fetchBike, createReview, deleteReview, clearReviewErrors } from '../../actions/bike_actions';
-import { selectBookings } from '../../reducers/selectors';
+import { selectBookings, getAverageRating } from '../../reducers/selectors';
 import { fetchBookings, createBooking, clearBookingErrors} from '../../actions/booking_actions';
 
 const mapStateToProps = ({ bikeDetail, session, bookings }) => ({
@@ -9,7 +9,8 @@ const mapStateToProps = ({ bikeDetail, session, bookings }) => ({
   errors: bikeDetail.errors,
   currentUser: session.currentUser,
   bookings: selectBookings(bookings),
-  bookingErrors: bookings.errors
+  bookingErrors: bookings.errors,
+  // averageRating: getAverageRating(bikeDetail)
 });
 
 const mapDispatchToProps = dispatch => ({

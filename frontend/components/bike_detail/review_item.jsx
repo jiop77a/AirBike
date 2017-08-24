@@ -31,7 +31,7 @@ class ReviewItem extends React.Component {
       <li className="review-item">
         <div className="review-label">
           <span>{review.reviewer_name}</span>
-          <span id="rating">Rating: {review.rating}/10</span>
+          <span id="rating"><strong>Rating: {review.rating}/10</strong></span>
         </div>
         <div className="review-body">
           <p>{review.body}</p>

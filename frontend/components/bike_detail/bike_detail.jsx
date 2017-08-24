@@ -9,7 +9,8 @@ class BikeDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pos: 0
+      pos: 0,
+      averageRating: 0
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -17,6 +18,7 @@ class BikeDetail extends Component {
   componentDidMount() {
     this.props.fetchBike(parseInt(this.props.match.params.bikeId));
     window.addEventListener('scroll', this.handleScroll);
+
   }
 
   componentWillUnmount() {
@@ -27,10 +29,6 @@ class BikeDetail extends Component {
   componentWillReceiveProps(nextProps) {
     if (parseInt(this.props.match.params.bikeId) !==  parseInt(nextProps.match.params.bikeId)) {
       this.props.fetchBike(parseInt(nextProps.match.params.bikeId));
-
-    if ((this.props.currentUser.id) !== (nextProps.currentUser.id)) {
-      this.props.fetchBookings(this.props.currentUser.id);
-      }
     }
   }
 
@@ -56,7 +54,7 @@ class BikeDetail extends Component {
     let height = $(document).height();
     let pos = this.state.pos;
     let bottom = pos + 620;
-    console.log(pos);
+    // console.log(pos);
     if (bottom > (height - 372.67)) {
       return 'noFixLow';
     } else if (pos < 108) {
@@ -66,9 +64,26 @@ class BikeDetail extends Component {
     }
   }
 
+  // averageRating(reviews) {
+  //   console.log(reviews);
+  //   let ratings = [];
+  //   let average;
+  //   if (reviews == {}) {
+  //     average = 0;
+  //   } else {
+  //     for (let item in reviews) {
+  //       ratings.push(item.rating)
+  //     }
+  //     let sum = ratings.reduce((acc, el) => acc + el);
+  //     average = sum / ratings.length;
+  //   }
+  //   return average;
+  // }
+
   render() {
     const { bikeDetail, currentUser, createReview, clearReviewErrors, createBooking, bookingErrors, clearBookingErrors } = this.props;
     const { reviews } = bikeDetail;
+    console.log(reviews);
 
     const optionalReviewForm = (user) => {
       if (user) {
@@ -80,7 +95,7 @@ class BikeDetail extends Component {
 
     const optionalBookingForm = (user) => {
       if (user) {
-        return <BookingForm createBooking = {createBooking} userId = {currentUser.id} bikeId = {bikeDetail.id} errors = {bookingErrors} clearErrors = {clearBookingErrors}/>;
+        return <BookingForm averageRating = {0} createBooking = {createBooking} userId = {currentUser.id} bikeId = {bikeDetail.id} errors = {bookingErrors} clearErrors = {clearBookingErrors}/>;
       } else {
         return <p>You must be logged in to book this bike</p>;
       }

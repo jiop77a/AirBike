@@ -8,7 +8,7 @@ class Bookings extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (parseInt(this.props.match.params.userId) !==  parseInt(nextProps.match.params.userId)) {
-      this.props.fetchBike(parseInt(nextProps.match.params.userId));
+      this.props.fetchBookings(parseInt(nextProps.match.params.userId));
     }
   }
 

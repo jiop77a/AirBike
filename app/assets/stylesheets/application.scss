@@ -43,7 +43,7 @@
 // https://gzmyu4ma9b-flywheel.netdna-ssl.com/wp-content/uploads/2016/05/Heritage-Division_classic-Italian-city-bikes_1.jpg
 
 strong {
-  color: $pink;
+  color: darkcyan;
 }
 html, body {
   font-family: Circular, "Helvetica Neue", Helvetica, Arial ,sans-serif;
@@ -473,10 +473,9 @@ section.details-and-reviews {
   flex-direction: column;
   justify-content: space-around;
   box-sizing: border-box;
+  align-items: center;
   height: 300px;
   width: 450px;
-  align-items: center;
-  border: 1px solid $light-grey;
   padding: 10px;
   color: $grey;
 
@@ -497,9 +496,14 @@ section.details-and-reviews {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid $light-grey;
+  height: 300px;
+  width: 450px;
 
   > p {
     color: darkred;
+    align-self: center;
   }
 }
 .bike-detail-label {
