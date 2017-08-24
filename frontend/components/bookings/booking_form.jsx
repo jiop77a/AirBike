@@ -42,27 +42,33 @@ class BookingForm extends Component {
  }
 
  render() {
+   const { averageRating, cost } = this.props;
    return (
      <div className="form-and-errors">
-       <h1>Book this Bike!</h1>
+       <div className="cost-and-rating">
+         <h1>{cost}$ <span id="lighter-font">per day</span></h1>
+        <div>Average Rating: {averageRating} </div>
+      </div>
        <form className="booking-form" onSubmit={this.handleSubmit}>
-         <div className="start-date-input">
-           <h1>Start Date</h1>
-           <input
-             type="date"
-             value={this.state.start_date}
-             onChange={this.update("start_date")}
-             />
-         </div>
-         <div className="end-date-input">
-           <h1>End Date</h1>
-           <input
-             type="date"
-             value={this.state.end_date}
-             onChange={this.update("end_date")}
-             />
-         </div>
-         <button className="promo-button">Book Now</button>
+         <div className="dates">
+           <div className="start-date-input">
+             <h1>Start Date</h1>
+             <input
+               type="date"
+               value={this.state.start_date}
+               onChange={this.update("start_date")}
+               />
+           </div>
+           <div className="end-date-input">
+             <h1>End Date</h1>
+             <input
+               type="date"
+               value={this.state.end_date}
+               onChange={this.update("end_date")}
+               />
+            </div>
+          </div>
+         <button className="promo-button">Book It!</button>
        </form>
        {this.renderErrors()}
      </div>

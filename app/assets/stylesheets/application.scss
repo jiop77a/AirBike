@@ -111,7 +111,7 @@ header, header hgroup {
   cursor: pointer;
   border-radius: 4px;
   background-color: $pink;
-  font-size: 19px;
+  font-size: 16px;
   font-family: $promo-font;
   font-weight: 100;
   color: #ffffff;
@@ -427,7 +427,7 @@ section.bike-detail-figure {
 
   > img {
     width: 450px;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
   }
 }
@@ -471,21 +471,47 @@ section.details-and-reviews {
 .form-and-errors {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   box-sizing: border-box;
   align-items: center;
-  height: 300px;
-  width: 450px;
   padding: 10px;
   color: $grey;
-
-  > form > div > h1 {
-    font-size: 20px;
-  }
-   > form > div {
-     margin-bottom: 20px;
-     }
 }
+
+.cost-and-rating {
+  > h1 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  > div {
+    font-size: 14px;
+    color: darkcyan;
+  }
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.booking-form {
+  padding-top: 10px;
+  border-top: 1px solid $light-grey;
+  display: flex;
+  width: 100%;
+}
+
+.start-date-input, .end-date-input {
+  > h1, input {
+    font-size: 14px;
+  }
+
+  >h1 {
+    font-weight: 700;
+  }
+}
+
+.dates {
+  display: flex;
+  align-items: center;
+}
+
 
 .booking-form-errors {
   > li {
@@ -493,12 +519,8 @@ section.details-and-reviews {
   }
 }
 .booking-form-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   box-sizing: border-box;
-  border: 1px solid $light-grey;
-  height: 300px;
+  height: 200px;
   width: 450px;
 
   > p {
@@ -529,7 +551,7 @@ section.details-and-reviews {
   font-size: 19px;
 }
 
-#type {
+#lighter-font {
   font-weight: 300;
 }
 

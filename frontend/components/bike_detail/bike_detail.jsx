@@ -10,7 +10,6 @@ class BikeDetail extends Component {
     super(props);
     this.state = {
       pos: 0,
-      averageRating: 0
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -64,26 +63,25 @@ class BikeDetail extends Component {
     }
   }
 
-  // averageRating(reviews) {
-  //   console.log(reviews);
-  //   let ratings = [];
-  //   let average;
-  //   if (reviews == {}) {
-  //     average = 0;
-  //   } else {
-  //     for (let item in reviews) {
-  //       ratings.push(item.rating)
-  //     }
-  //     let sum = ratings.reduce((acc, el) => acc + el);
-  //     average = sum / ratings.length;
-  //   }
-  //   return average;
-  // }
+  averageRating(reviews) {
+    let ratings = [];
+    let average;
+    if (Object.keys(reviews).length === 0) {
+      average = 0;
+    } else {
+      for (let i = 0; i < values(reviews).length; i++) {
+        ratings.push(values(reviews)[i].rating);
+      }
+      let sum = ratings.reduce((acc, el) => acc + el);
+      average = sum / ratings.length;
+    }
+    return Math.round(average);
+  }
 
   render() {
     const { bikeDetail, currentUser, createReview, clearReviewErrors, createBooking, bookingErrors, clearBookingErrors } = this.props;
-    const { reviews } = bikeDetail;
-    console.log(reviews);
+    const { reviews, cost } = bikeDetail;
+    console.log(Object.keys(reviews).length === 0);
 
     const optionalReviewForm = (user) => {
       if (user) {
@@ -95,7 +93,14 @@ class BikeDetail extends Component {
 
     const optionalBookingForm = (user) => {
       if (user) {
-        return <BookingForm averageRating = {0} createBooking = {createBooking} userId = {currentUser.id} bikeId = {bikeDetail.id} errors = {bookingErrors} clearErrors = {clearBookingErrors}/>;
+        return <BookingForm
+                  averageRating = {this.averageRating(reviews)}
+                  cost = {cost}
+                  createBooking = {createBooking}
+                  userId = {currentUser.id}
+                  bikeId = {bikeDetail.id}
+                  errors = {bookingErrors}
+                  clearErrors = {clearBookingErrors}/>;
       } else {
         return <p>You must be logged in to book this bike</p>;
       }
@@ -113,7 +118,7 @@ class BikeDetail extends Component {
                 <div id="description">{bikeDetail.description}</div>
                 <div id="city">
                   {bikeDetail.city}{dotspace}
-                  <span id="type">{bikeDetail.variety} Bike</span>
+                  <span id="lighter-font">{bikeDetail.variety} Bike</span>
                 </div>
               </div>
               <div className="details-container">
