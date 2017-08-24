@@ -427,7 +427,7 @@ section.bike-detail-figure {
 
   > img {
     width: 450px;
-    height: 400px;
+    height: 350px;
     object-fit: cover;
   }
 }
@@ -515,13 +515,14 @@ section.details-and-reviews {
 
 
 .booking-form-errors {
+  margin-top: 10px;
   > li {
      color: darkred;
   }
 }
 .booking-form-container {
   box-sizing: border-box;
-  height: 200px;
+  height: 150px;
   width: 450px;
 
   > p {
@@ -736,6 +737,7 @@ input.city-input {
   margin-right: 10%;
   margin-top: 20px;
   margin-bottom: 200px;
+  color: $grey;
 }
 
 .bookings-list {
