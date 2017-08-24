@@ -47,11 +47,7 @@ class ReviewForm extends React.Component {
             onChange={this.update("rating")}
             />
         </div>
-        <br/>
         <div className="review-form-comment">
-          <label>Comment:</label>
-          <br/>
-          <br/>
           <textarea
             cols="30"
             rows="10"
@@ -59,7 +55,6 @@ class ReviewForm extends React.Component {
             onChange={this.update("body")}
           />
         </div>
-        <br/>
         <button className="promo-button">Submit</button>
       </form>
     );

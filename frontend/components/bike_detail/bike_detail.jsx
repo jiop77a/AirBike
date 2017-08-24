@@ -85,7 +85,11 @@ class BikeDetail extends Component {
 
     const optionalReviewForm = (user) => {
       if (user) {
-        return <ReviewForm createReview = {createReview} user = {currentUser} bikeId = {bikeDetail.id} clearErrors = {clearReviewErrors}/>;
+        return <ReviewForm
+                  createReview = {createReview}
+                  user = {currentUser}
+                  bikeId = {bikeDetail.id}
+                  clearErrors = {clearReviewErrors}/>;
       } else {
         return <p>You must be logged in to leave a review</p>;
       }

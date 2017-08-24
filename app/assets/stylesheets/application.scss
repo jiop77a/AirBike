@@ -589,7 +589,7 @@ textarea {
   > h2 {
     font-weight: bold;
     font-size: 19px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: $grey;
   }
 }
@@ -638,7 +638,12 @@ li.review-item {
 }
 
 .review-form-rating {
+  margin-bottom: 10px;
   font-size: 16px;
+}
+
+.review-form-content {
+  margin-bottom: 10px;
 }
 
 .bike-detail-errors {

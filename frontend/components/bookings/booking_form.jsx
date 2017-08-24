@@ -42,7 +42,10 @@ class BookingForm extends Component {
  }
 
  render() {
+
    const { averageRating, cost } = this.props;
+   const dotspace = " · ";
+
    return (
      <div className="form-and-errors">
        <div className="cost-and-rating">
