@@ -43,7 +43,10 @@ class BikeMap extends React.Component {
   componentDidMount() {
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions[this.props.city]);
-    this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
+    this.MarkerManager = new MarkerManager(
+      this.map,
+      this.handleMarkerClick.bind(this)
+    );
     this.registerListeners();
     this.MarkerManager.updateMarkers(this.props.bikes);
   }

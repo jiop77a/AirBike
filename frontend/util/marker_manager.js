@@ -24,7 +24,7 @@ class MarkerManager {
   createMarkerFromBike(bike) {
     const position = new google.maps.LatLng(bike.lat, bike.lng);
     const image = {
-      url: 'https://res.cloudinary.com/dol1mm8bd/image/upload/v1502131413/8071_yxilab.png',
+      url: 'https://res.cloudinary.com/dol1mm8bd/image/upload/v1503945172/mapmarker_to73dv.png',
       scaledSize: new google.maps.Size(60,60),
     };
     const marker = new google.maps.Marker({
