@@ -79,9 +79,17 @@ class BikeDetail extends Component {
   }
 
   render() {
-    const { bikeDetail, currentUser, createReview, clearReviewErrors, createBooking, bookingErrors, clearBookingErrors } = this.props;
+    const {
+      bikeDetail,
+      currentUser,
+      createReview,
+      clearReviewErrors,
+      createBooking,
+      bookingErrors,
+      clearBookingErrors
+    } = this.props;
+
     const { reviews, cost } = bikeDetail;
-    console.log(Object.keys(reviews).length === 0);
 
     const optionalReviewForm = (user) => {
       if (user) {
@@ -115,7 +123,6 @@ class BikeDetail extends Component {
     return (
       <section className="bike-detail">
         <section className="details-and-reviews">
-
           <section className="details-and-form">
             <div className="detail-content">
               <div className="bike-detail-label">
@@ -125,18 +132,19 @@ class BikeDetail extends Component {
                   <span id="lighter-font">{bikeDetail.variety} Bike</span>
                 </div>
               </div>
-              <div className="details-container">
-                <div className="bike-type">
-                  <span></span>
-                </div>
-              </div>
             </div>
           </section>
           <section className="reviews-and-form">
             <div className="review-list">
               <h2>Reviews</h2>
               <ul className="review-items">
-                {values(reviews).map(review => <ReviewItem key = {review.id} review = {review} user = {this.props.currentUser} deleteReview = {this.props.deleteReview}/>)}
+                {values(reviews).map(review =>
+                  <ReviewItem
+                    key = {review.id}
+                    review = {review}
+                    user = {this.props.currentUser}
+                    deleteReview = {this.props.deleteReview}/>
+                )}
               </ul>
             </div>
             <div className="review-form-container">
