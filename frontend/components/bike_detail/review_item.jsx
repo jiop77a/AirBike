@@ -21,7 +21,11 @@ class ReviewItem extends React.Component {
 
     const optionalButton = (reviewId, user) => {
       if (user && (user.id === reviewId)) {
-        return <button onClick= { this.remove }>Delete</button>;
+        return <button
+                  className="promo-button" 
+                  onClick= { this.remove }>
+                  Delete
+                </button>;
       } else {
         return null;
       }

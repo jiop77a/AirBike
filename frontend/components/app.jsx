@@ -30,7 +30,9 @@ const App = () => (
 
       <Route path="/search" component={GreetingContainer} />
       <Route path="/search" component={SearchContainer} />
+      <Route path="/bikes/:bikeId" component={GreetingContainer} />
       <Route path="/bikes/:bikeId" component={BikeDetailContainer} />
+      <ProtectedRoute path="/bookings/:userId" component={GreetingContainer} />
       <ProtectedRoute path="/bookings/:userId" component={BookingsContainer} />
 
       <hr></hr>
