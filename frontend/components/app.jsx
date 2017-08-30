@@ -22,21 +22,23 @@ const App = () => (
     <Switch>
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
-      <Route component={GreetingContainer} />
     </Switch>
 
+      <Route exact path="/" component={GreetingContainer} />
       <Route exact path="/" component={SearchAndText} />
       <Route exact path="/" component={FeaturedBikeContainer} />
-      <Route path="/bikes/:bikeId" component={BikeDetailContainer} />
+
+      <Route path="/search" component={GreetingContainer} />
       <Route path="/search" component={SearchContainer} />
+      <Route path="/bikes/:bikeId" component={BikeDetailContainer} />
       <ProtectedRoute path="/bookings/:userId" component={BookingsContainer} />
-      
+
       <hr></hr>
 
       <Switch>
         <Route exact path="/" component={Footer} />
-        <Route path="/bikes/:bikeId" component={Footer} />
         <Route path="/search" component={Footer} />
+        <Route path="/bikes/:bikeId" component={Footer} />
         <ProtectedRoute path="/bookings/:userId" component={Footer} />
       </Switch>
 
