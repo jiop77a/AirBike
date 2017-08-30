@@ -36,7 +36,7 @@ class ReviewItem extends React.Component {
         <div className="review-body">
           <p>{review.body}</p>
         </div>
-        <div className = "promo-button">
+        <div className = "delete-button">
           {optionalButton(review.user_id, this.props.user)}
         </div>
       </li>
