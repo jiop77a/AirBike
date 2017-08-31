@@ -426,7 +426,7 @@ section.bike-detail-figure {
   flex-direction: column;
   position: fixed;
   top: 20px;
-  right: calc((100vw - 1050px)/2);
+  right: calc((100vw - 800px)/2);
 
   > img {
     width: 300px;
@@ -477,6 +477,7 @@ section.details-and-reviews {
   box-sizing: border-box;
   align-items: center;
   padding: 10px;
+  padding-bottom: 0px;
   color: $grey;
 }
 
