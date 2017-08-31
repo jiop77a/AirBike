@@ -48,12 +48,10 @@ class BikeDetail extends Component {
     );
   }
 
-  newId() {
-    // console.log(this.state.pos);
+  newId(user) {
     let height = $(document).height();
     let pos = this.state.pos;
-    let bottom = pos + 388;
-    // console.log(pos);
+    let bottom = user ? (pos + 388) : (pos + 238);
     if (bottom > (height - 364)) {
       return 'noFixLow';
     } else if (pos < 87) {
@@ -149,15 +147,19 @@ class BikeDetail extends Component {
             </div>
             <div className="review-form-container">
               <h2>Create Review</h2>
-              {optionalReviewForm(Boolean(this.props.currentUser))}
+              {optionalReviewForm(Boolean(currentUser))}
               {this.renderErrors()}
             </div>
           </section>
         </section>
-        <section className="bike-detail-figure" id={this.newId()}>
-          <img src ={bikeDetail.picture_url} alt={bikeDetail.description} />
+        <section
+          className="bike-detail-figure"
+          id={this.newId(Boolean(currentUser))}>
+          <img
+            src ={bikeDetail.picture_url}
+            alt={bikeDetail.description} />
           <div className="booking-form-container">
-            {optionalBookingForm(Boolean(this.props.currentUser))}
+            {optionalBookingForm(Boolean(currentUser))}
           </div>
         </section>
       </section>
