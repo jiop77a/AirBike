@@ -17,7 +17,7 @@ class FeaturedBikeItem extends Component {
           <div className="featured-bike-label">
             <div className="featured-cost-description">
               <label>${bike.cost}</label>
-              <label>{bike.description}</label>
+              <label id='lighter-font'>{bike.description}</label>
             </div>
             <div className="featured-city">
               <strong>{bike.city}</strong>

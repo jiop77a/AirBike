@@ -104,7 +104,7 @@ header, header hgroup {
   cursor: pointer;
   border-radius: 4px;
   background-color: $pink;
-  font-size: 16px;
+  font-size: 14px;
   font-family: $promo-font;
   font-weight: 100;
   color: #ffffff;
@@ -429,8 +429,8 @@ section.bike-detail-figure {
   right: calc((100vw - 1050px)/2);
 
   > img {
-    width: 450px;
-    height: 350px;
+    width: 300px;
+    height: 200px;
     object-fit: cover;
   }
 }
@@ -448,7 +448,7 @@ section.bike-detail-figure {
 
 section.bike-detail {
     display: flex;
-    width: 1050px;
+    width: 800px;
     margin-top: 50px;
     margin-left: auto;
     margin-bottom: 100px;
@@ -462,7 +462,7 @@ section.details-and-form {
 }
 
 section.details-and-reviews {
-  width: 550px;
+  width: 450px;
   margin-right: 50px;
 }
 
@@ -482,29 +482,30 @@ section.details-and-reviews {
 
 .cost-and-rating {
   > h1 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
   }
   > div {
-    font-size: 14px;
+    font-size: 12px;
     color: darkcyan;
   }
   align-self: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .booking-form {
-  padding-top: 10px;
+  padding-top: 5px;
   border-top: 1px solid $light-grey;
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 
 .start-date-input, .end-date-input {
   > h1, input {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   >h1 {
@@ -514,7 +515,11 @@ section.details-and-reviews {
 
 .dates {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  font-size: 11px;
+  height: 100px
 }
 
 
@@ -526,8 +531,7 @@ section.details-and-reviews {
 }
 .booking-form-container {
   box-sizing: border-box;
-  height: 150px;
-  width: 450px;
+  width: 300px;
 
   > p {
     color: darkred;
@@ -558,7 +562,8 @@ section.details-and-reviews {
 }
 
 #lighter-font {
-  font-weight: 300;
+  font-weight: 400;
+  color: rgba(72, 72, 72, 0.8)
 }
 
 
