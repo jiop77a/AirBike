@@ -131,7 +131,7 @@ hr {
   margin-left: 10%;
   margin-right: 10%;
   width: 80%;
-  padding: 24px;
+  padding: 30px;
   font-family: $promo-font
 }
 
@@ -142,6 +142,7 @@ hr {
 
 .footy-foot {
   border-top: 1px solid rgba(72, 72, 72, 0.2);
+  font-size: 13px;
   padding-top: 10px;
   display: flex;
   flex-direction: row;
@@ -152,6 +153,7 @@ hr {
 .footy-left {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     padding: 5px;
     width: 10%;
 
@@ -168,7 +170,7 @@ hr {
     justify-content: flex-end;
 
     > a > img {
-      height: 20px;
+      height: 15px;
     }
 
     > a > img:last-of-type {
@@ -180,7 +182,7 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: right;
-    font-size: 15px;
+    font-size: 12px;
     color: rgba(118, 118, 118, 0.9);
     padding-bottom: 48px;
     padding-left: 48px;
