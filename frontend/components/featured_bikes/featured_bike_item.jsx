@@ -20,7 +20,7 @@ class FeaturedBikeItem extends Component {
               <label>{bike.description}</label>
             </div>
             <div className="featured-city">
-              <span><strong>{bike.city}</strong></span>
+              <strong>{bike.city}</strong>
             </div>
           </div>
         </Link>

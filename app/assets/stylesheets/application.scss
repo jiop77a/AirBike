@@ -337,7 +337,7 @@ ul.session-errors {
 
   > h2 {
     margin-bottom: 20px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
     font-family: $promo-font;
     color: $grey;
@@ -348,8 +348,8 @@ ul.session-errors {
 .featured-bike-item {
 
   margin-right: 15px;
-  width: 300px;
-  height: 300px;
+  margin-bottom: 20px;
+  width: 240px;
 
   > a {
     display: flex;
@@ -358,8 +358,8 @@ ul.session-errors {
   }
 
   > a > img {
-      width: 300px;
-      height: 200px;
+      width: 240px;
+      height: 160px;
       vertical-align: middle;
       transition: all 0.5s ease;
   }
@@ -374,8 +374,7 @@ ul.session-errors {
 .featured-bike-label {
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  padding-top: 5px;
   color: $grey;
 }
 
@@ -383,7 +382,8 @@ ul.session-errors {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-bottom: 5px;
+  align-items: center;
+  margin-bottom: 2px;
 
   > label:last-of-type {
     overflow: hidden;
@@ -391,12 +391,14 @@ ul.session-errors {
     text-overflow: ellipsis;
     font-weight: normal;
     padding-left: 10px;
+    color: rgba(72,72,72,0.8);
   }
 
   > label {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 12px;
   }
+
 
   // > span:last-of-type {
   //   font-size: 15px;
@@ -404,8 +406,14 @@ ul.session-errors {
   //   overflow: hidden;
   //   text-overflow: ellipsis;
   // }
-
 }
+
+
+.featured-city {
+  font-size: 12px;
+}
+
+
 .featured-bikes-list {
   display: flex;
   flex-wrap: wrap;
