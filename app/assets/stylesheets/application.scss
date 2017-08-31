@@ -59,16 +59,12 @@ h1 {
 header {
   // border: 2px solid gray;
   padding: 10px;
-  margin: 10px;
   background-color: rgba(255, 255, 255, 0.4);
   min-width: 400px;
 
-  > a {
-    font-size: 30px;
-  }
-
   > a > img {
-    width: 40px;
+    width: 35px;
+    padding-left: 5px;
   }
 }
 
@@ -76,6 +72,7 @@ header, header hgroup {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 11px
 }
 
 .bookings-link {
@@ -86,19 +83,15 @@ header, header hgroup {
 }
 
 .nav-link {
-  font-size: 14px;
   color: rgba(72, 72, 72, 0.9);
   margin-left: 16px;
   margin-right: 16px;
-  padding-bottom: 13px;
 }
 
 .header-name {
-    font-size: 14px;
     color: rgba(72, 72, 72, 0.9);
     margin-left: 16px;
     margin-right: 16px;
-    padding-bottom: 13px;
   }
 
 .nav-link:hover {
@@ -219,7 +212,7 @@ section.search-and-text {
     align-items: center;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 64px;
+    margin-top: 40px;
     margin-bottom: 64px;
     width: 80%;
 }
@@ -234,14 +227,14 @@ section.search-and-text {
 
 p.welcome-line-1 {
     color: $pink;
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 600;
     font-family: $promo-font;
 
 }
 
 p.welcome-line-2 {
-    font-size: 48px;
+    font-size: 40px;
     font-family: $promo-font;
     font-weight: 200;
     color: $grey
@@ -249,7 +242,7 @@ p.welcome-line-2 {
 }
 
 .promo-text-container {
-  padding-right: 30%;
+  padding-right: 20%;
 }
 
 .search-bar {
