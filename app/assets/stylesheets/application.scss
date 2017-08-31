@@ -552,13 +552,13 @@ section.details-and-reviews {
 #description {
   font-weight: 700;
   color: $grey;
-  font-size: 36px;
+  font-size: 30px;
   padding-bottom: 10px;
 }
 
 #city {
   color: $grey;
-  font-size: 19px;
+  font-size: 15px;
 }
 
 #lighter-font {
@@ -576,7 +576,7 @@ section.details-and-reviews {
 
 section.reviews-and-form {
   margin-top: 50px;
-  padding-top: 50px;
+  padding-top: 30px;
   border-top: 1px solid $light-grey;
   display: flex;
   flex-direction: column;
@@ -599,7 +599,7 @@ textarea {
 
   > h2 {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 15px;
     margin-bottom: 20px;
     color: $grey;
   }
@@ -608,7 +608,7 @@ textarea {
 .review-list {
   > h2 {
     color: $grey;
-    font-size: 19px;
+    font-size: 15px;
     margin-bottom: 30px;
   }
 }
@@ -628,12 +628,13 @@ li.review-item {
 }
 
 #rating {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 300;
+  margin-top: 2px;
 }
 
 .review-body {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
 }
 
@@ -650,10 +651,14 @@ li.review-item {
 
 .review-form-rating {
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .review-form-content {
+  margin-bottom: 10px;
+}
+
+.review-form-comment {
   margin-bottom: 10px;
 }
 
