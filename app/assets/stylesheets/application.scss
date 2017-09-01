@@ -213,11 +213,10 @@ section.search-and-text {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: auto;
+    width: 800px;
     margin-top: 40px;
     margin-bottom: 64px;
-    width: 80%;
 }
 
 .promo-text {
@@ -328,10 +327,8 @@ ul.session-errors {
   border-top: 1px solid rgba(72, 72, 72, 0.2);
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 200px;
-  width: 80%;
+  margin: auto;
+  width: 800px;
   background-color: rgba(255, 255, 255, 0.4);
   padding-top: 50px;
   // border: 2px solid gray;
@@ -348,9 +345,8 @@ ul.session-errors {
 
 .featured-bike-item {
 
-  margin-right: 15px;
   margin-bottom: 20px;
-  width: 240px;
+  width: 250px;
 
   > a {
     display: flex;
@@ -359,8 +355,8 @@ ul.session-errors {
   }
 
   > a > img {
-      width: 240px;
-      height: 160px;
+      width: 250px;
+      height: 170px;
       vertical-align: middle;
       transition: all 0.5s ease;
   }
@@ -418,6 +414,7 @@ ul.session-errors {
 .featured-bikes-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 //bike showpage
@@ -714,7 +711,7 @@ input.city-input {
 .map-and-results {
   display: flex;
   flex-direction: row;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   justify-content: space-evenly;
 }
 
