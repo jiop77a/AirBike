@@ -756,13 +756,19 @@ input.city-input {
 .bookings-list {
 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-wrap: nowrap;
+  overflow: scroll;
 
 }
 .booking-item {
   margin-bottom: 20px;
+  margin-right: 20px;
 }
+
+.booking-item:last-of-type {
+  margin-right: 0px;
+}
+
 .booking-picture {
 
  > a > img {
