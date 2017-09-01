@@ -746,10 +746,10 @@ input.city-input {
 //bookings page
 
 .bookings-container {
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 799px;
+  margin: auto;
   margin-top: 20px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   color: $grey;
 }
 
@@ -757,13 +757,11 @@ input.city-input {
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-top: 30px;
+  justify-content: space-around;
 
 }
 .booking-item {
-  margin-right: 40px;
-  margin-top: 40px;
+  margin-bottom: 20px;
 }
 .booking-picture {
 
