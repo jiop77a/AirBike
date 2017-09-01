@@ -12,13 +12,24 @@ class Bookings extends Component {
     }
   }
 
+  optionalMessage(bookings) {
+    if (bookings.length === 0) {
+      return (<p>You have no bookings to display.</p>);
+    }
+  }
+
   render() {
     const { bookings, deleteBooking } = this.props;
 
     return (
       <section className="bookings-container">
         <ul className="bookings-list">
-          {bookings.map(booking => <BookingItem key = {booking.id} booking = {booking} deleteBooking = {deleteBooking}
+          {this.optionalMessage(bookings)}
+          {bookings.map(booking =>
+            <BookingItem
+              key = {booking.id}
+              booking = {booking}
+              deleteBooking = {deleteBooking}
           />)}
         </ul>
       </section>
