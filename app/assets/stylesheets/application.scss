@@ -328,6 +328,7 @@ ul.session-errors {
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-bottom: 200px;
   width: 800px;
   background-color: rgba(255, 255, 255, 0.4);
   padding-top: 50px;
@@ -624,6 +625,16 @@ li.review-item {
     margin-bottom: 20px;
     border-bottom: 1px solid $light-grey;
     padding-bottom: 10px;
+}
+
+.body-and-buttom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#text-fix {
+  max-width: 80%;
 }
 
 #rating {

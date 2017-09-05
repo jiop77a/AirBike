@@ -15,14 +15,13 @@ class ReviewItem extends React.Component {
   }
 
 
-
   render() {
-    const { review } = this.props;
+    const { review, user } = this.props;
 
     const optionalButton = (reviewId, user) => {
       if (user && (user.id === reviewId)) {
         return <button
-                  className="promo-button" 
+                  className="promo-button"
                   onClick= { this.remove }>
                   Delete
                 </button>;
@@ -31,17 +30,30 @@ class ReviewItem extends React.Component {
       }
     };
 
+    const optionalId = (reviewId, user) => {
+      if (user && (user.id === reviewId)) {
+        return "text-fix";
+      } else {
+        return null;
+      }
+    };
+
+
     return (
       <li className="review-item">
         <div className="review-label">
           <span>{review.reviewer_name}</span>
           <span id="rating"><strong>Rating: {review.rating}/10</strong></span>
         </div>
-        <div className="review-body">
-          <p>{review.body}</p>
-        </div>
-        <div className = "delete-button">
-          {optionalButton(review.user_id, this.props.user)}
+        <div className="body-and-buttom">
+          <div
+            className="review-body"
+            id={optionalId(review.user_id, user)}>
+            {review.body}
+          </div>
+          <div className="delete-button">
+            {optionalButton(review.user_id, user)}
+          </div>
         </div>
       </li>
     );
