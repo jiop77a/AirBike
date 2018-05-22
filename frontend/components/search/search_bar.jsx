@@ -37,10 +37,7 @@ class SearchBar extends React.Component {
               onChange={this.update('city')}>
 
               {cities.map((city, i) => {
-                return <option value={city} key={i}>
-
-                  {city}
-              </option>;
+                return <option value={city} key={i}>{city}</option>;
             })}
           </select>
         </div>
@@ -63,4 +60,4 @@ class SearchBar extends React.Component {
   }
 }
 
-  export default withRouter(SearchBar);
+  export default SearchBar;

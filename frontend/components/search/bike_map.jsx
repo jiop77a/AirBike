@@ -52,7 +52,9 @@ class BikeMap extends React.Component {
   }
 
   componentWillReceiveProps(newProps){
-    this.map.setCenter(mapOptions[newProps.city].center);
+    if (this.props.city !== newProps.city) {
+      this.map.setCenter(mapOptions[newProps.city].center);
+    }
   }
 
   componentDidUpdate() {
