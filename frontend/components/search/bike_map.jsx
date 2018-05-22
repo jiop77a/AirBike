@@ -42,7 +42,7 @@ class BikeMap extends React.Component {
 
   componentDidMount() {
     const map = this.refs.map;
-    this.map = new google.maps.Map(map, mapOptions[this.props.city]);
+    this.map = new google.maps.Map(map, mapOptions["San Francisco"]);
     this.MarkerManager = new MarkerManager(
       this.map,
       this.handleMarkerClick.bind(this)
@@ -52,6 +52,7 @@ class BikeMap extends React.Component {
   }
 
   componentWillReceiveProps(newProps){
+    console.log(this.props);
     if (this.props.city !== newProps.city) {
       this.map.setCenter(mapOptions[newProps.city].center);
     }
@@ -68,6 +69,7 @@ class BikeMap extends React.Component {
         northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west }
       };
+      console.log('idle event fired');
       this.props.updateFilter('bounds', bounds);
     });
   }

@@ -8,24 +8,37 @@ class SearchBar extends React.Component {
       city: "San Francisco",
       variety: "Select Bike Type"
     };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.updateFilter('city', this.state.city);
-    this.props.updateFilter('variety', this.state.variety);
-  }
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   this.props.updateFilter('city', this.state.city);
+  //   this.props.updateFilter('variety', this.state.variety);
+  // }
 
   update(property) {
-   return e => this.setState({ [property]: e.target.value });
+    const { updateFilter } = this.props;
+    return e => updateFilter(property, e.target.value);
   }
 
   render() {
-    const bikeTypes = ["Select Bike Type", "All", "Cruiser", "Mountain", "Road", "Eccentric"];
-    const cities = ["San Francisco", "Oakland", "Berkeley"];
+    const bikeTypes = [
+      "Select Bike Type",
+      "All",
+      "Cruiser",
+      "Mountain",
+      "Road",
+      "Eccentric"
+    ];
+
+    const cities = [
+      "San Francisco",
+      "Oakland",
+      "Berkeley"
+    ];
 
     return (
       <form className="search-bar" onSubmit={this.handleSubmit}>
@@ -33,7 +46,6 @@ class SearchBar extends React.Component {
         <div className="search-bar-city">
 
           <select
-              value={this.state.city}
               onChange={this.update('city')}>
 
               {cities.map((city, i) => {
@@ -43,8 +55,8 @@ class SearchBar extends React.Component {
         </div>
         <div className="search-bar-variety">
           <select
-             value={this.state.variety}
-             onChange={this.update('variety')}>
+             onChange={this.update('variety')}
+             >
              {bikeTypes.map((type, i) => {
                return <option value={type} key={i}
                  disabled={type==="Select Bike Type" ? "disabled" : ""}>
@@ -54,7 +66,7 @@ class SearchBar extends React.Component {
              })}
            </select>
         </div>
-        <button className="promo-button">Search</button>
+        {/* <button className="promo-button">Search</button> */}
       </form>
     );
   }
