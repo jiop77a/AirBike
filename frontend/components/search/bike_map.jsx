@@ -52,7 +52,6 @@ class BikeMap extends React.Component {
   }
 
   componentWillReceiveProps(newProps){
-    console.log(this.props);
     if (this.props.city !== newProps.city) {
       this.map.setCenter(mapOptions[newProps.city].center);
     }
@@ -69,7 +68,6 @@ class BikeMap extends React.Component {
         northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west }
       };
-      console.log('idle event fired');
       this.props.updateFilter('bounds', bounds);
     });
   }
